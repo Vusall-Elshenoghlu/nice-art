@@ -8,9 +8,9 @@ const commonStyles = {
             fontSize: sizes.base,
         },
         body: {
-            fontFamily: fonts.fontMain,
+            fontFamily: fonts.mainFont,
             margin: 0,
-            backgroundColor: colors.mainBg,
+            backgroundColor: colors.mainBGColor,
         },
         a: {textDecoration: 'none', '&:hover': {color: 'black',},},
         img: {maxWidth: '100%',},

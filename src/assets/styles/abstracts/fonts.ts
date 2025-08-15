@@ -7,7 +7,6 @@ const fonts = {
 
     fontLight: 'Nunito Light',
 
-    fontMain: 'Nunito Medium',
     mainFont: 'West Trial',
 
 };
