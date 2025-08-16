@@ -21,4 +21,16 @@ export const az = {
     complete:"Tamamla",
     uncomplete:"Tamamlama",
     remove_task: 'Taski sil',
+
+    //Navbar
+    navbar_about: 'about',
+    navbar_contact: 'contact',
+    navbar_partners: 'partners',
+    navbar_products: 'products',
+
+    //Home
+    home_hero_headingText: 'We help you find the perfect loan',
+    home_hero_malesudaParagraph: 'Malesuada pellentesque bibendum enim eu sit. Tincidunt eget mi est, egestas. Nunc, dignissim amet, purus amet. Amet dictum sit elit urna non purus, gravida commodo.',
+    home_hero_productsBtn: 'Products',
+    home_hero_aboutBtn: 'About NICART'
 };

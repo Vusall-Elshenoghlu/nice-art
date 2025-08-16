@@ -9,6 +9,7 @@ const commonStyles = {
         },
         body: {
             fontFamily: fonts.mainFont,
+            fontWeight: 400,
             margin: 0,
             backgroundColor: colors.mainBGColor,
         },

@@ -5,58 +5,14 @@ import fonts from 'assets/styles/abstracts/fonts';
 import {breakpoint} from '../../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../../assets/styles/abstracts/sizes';
 const styles = {
-    navbarContainer: {
-        width: '100%',
-        backgroundColor: colors.mainBGColor,
-        zIndex: '100 !important',
-        display: 'flex',
-        alignItems: 'center',
 
-
-        [breakpoint(1024)]: {
-            height: rem(80),
-            paddingLeft: rem(50),
-            paddingRight: rem(80),
-        },
-
-        [breakpoint(768)]: {
-            height: rem(70),
-            paddingLeft: rem(20),
-            paddingRight: rem(20),
-        },
-
-        [breakpoint(480)]: {
-            height: rem(60),
-            paddingLeft: rem(15),
-            paddingRight: rem(15),
-        },
-    },
     logoImg: {
-        width: rem(165),
-        height: rem(40),
-        objectFit: 'contain',
-
-        [breakpoint(1024)]: {
-            width: rem(140),
-            height: rem(35),
-        },
-
-        [breakpoint(768)]: {
-            width: rem(120),
-            height: rem(30),
-        },
-
-        [breakpoint(480)]: {
-            width: rem(100),
-            height: rem(25),
-        },
+        width: '100%',
+        height: '100%',
     },
     left: {
-        width: '100%',
-        alignItems: 'center',
-        '& img': {
-            display: 'block',
-        }
+        width: rem(147.48),
+        height: rem(40),
     },
 
     rightContainer: {
@@ -88,7 +44,7 @@ const styles = {
     hamburger: {
         display: 'none',
         fontSize: rem(24),
-        color: '#ffffff',
+        color: colors.activeLiColor,
         cursor: 'pointer',
         padding: rem(8),
         borderRadius: rem(4),
@@ -192,4 +148,4 @@ const styles = {
 
 };
 
-export const useHeaderNavbarStyles = createUseStyles(styles);
+export const UseHeaderNavbarStyles = createUseStyles(styles);

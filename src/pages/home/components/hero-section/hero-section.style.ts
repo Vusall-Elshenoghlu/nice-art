@@ -1,33 +1,36 @@
 import {createUseStyles} from 'react-jss';
 import {rem} from '../../../../assets/styles/abstracts/functions';
-import fonts from '../../../../assets/styles/abstracts/fonts';
 import colors from '../../../../assets/styles/abstracts/color';
+import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
+import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
+import fonts from '../../../../assets/styles/abstracts/fonts';
 
 const styles = {
-    '@ global': {
-        body: {
-            backgroundColor: 'white',
-        }
-    },
     wrapper: {
         width: '100%',
         height: rem(400),
     },
     headingText: {
-        fontWeight: 800,
-        fontStyle: 'normal',
-        fontSize: 72,
+        fontWeight: 'bold',
+        fontSize: 70,
         lineHeight: 1,
         letterSpacing: 0,
         color: colors.activeLiColor,
+        [breakpoint(breakpoints.tabletM)]: {
+            fontSize: rem(37),
+            lineHeight: '100%',
+            marginBottom: rem(15),
+            fontWeight: '800',
+        }
     },
     malesudaParagraph: {
         fontSize: rem(17),
+        lineHeight: rem(22),
     },
     buttons: {
         display: 'flex',
         gap: rem(20),
-        marginTop: rem(15),
+        marginTop: rem(20),
 
     },
     productsBtn: {
@@ -60,6 +63,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        flow: 'vertical',
         gap: rem(8),
         '& p': {
             lineHeight: rem(24),

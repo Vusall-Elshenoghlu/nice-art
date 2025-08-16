@@ -1,25 +1,26 @@
 import Logo from 'assets/images/statics/Logo.png';
-import { useHeaderNavbarStyles } from './header-navbar.style';
+import {UseHeaderNavbarStyles,} from './header-navbar.style';
 import { NavLink } from 'react-router-dom';
 import { Routes } from 'router/routes';
 import { useState } from 'react';
 import HeaderModalComponent from '../header-modal/header-modal.component';
+import useLocalization from '../../../../../assets/lang';
 
 const HeaderNavbarComponent = () => {
-    const classes = useHeaderNavbarStyles();
+    const classes = UseHeaderNavbarStyles();
     const [isOpenMenu, setIsOpenMenu] = useState(false);
+    const translate = useLocalization();
     const navLinks = [
-        { to: Routes.about, label: 'about' },
-        { to: Routes.products, label: 'products' },
-        { to: Routes.contact, label: 'contact' },
-        { to: Routes.partners, label: 'partners' },
+        { to: Routes.about, label: translate('navbar_about') },
+        { to: Routes.products, label: translate('navbar_products') },
+        { to: Routes.contact, label: translate('navbar_contact') },
+        { to: Routes.partners, label: translate('navbar_partners') },
     ];
 
     return (
-        <div className={classes.navbarContainer}>
             <div className={'container'}>
                 <div className='row'>
-                    <div className='col-6 col-md-3 col-lg-2 p-35'>
+                    <div className='col-6 col-md-3 col-lg-2 py-35'>
                         <div className={classes.left}>
                             <NavLink to={Routes.default}>
                                 <img className={classes.logoImg} src={Logo} alt='logo'/>
@@ -29,12 +30,11 @@ const HeaderNavbarComponent = () => {
 
                     <div className='col-6 col-md-9 col-lg-10 p-30'>
                         <div className={`${classes.rightContainer} d-flex align-items-center`}>
-                            {/* Hamburger icon */}
                             <div
                                 className={`${classes.hamburger} d-lg-none`}
                                 onClick={() => setIsOpenMenu(prev => !prev)}
                             >
-                                &#9776; {/* üç xəttli hamburger */}
+                                &#9776;
                             </div>
 
                             {isOpenMenu && (
@@ -61,7 +61,6 @@ const HeaderNavbarComponent = () => {
                     </div>
                 </div>
             </div>
-        </div>
     );
 };
 
