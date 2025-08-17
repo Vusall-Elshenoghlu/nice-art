@@ -2,6 +2,8 @@ const colors = {
     mainBGColor: 'white',
     liColor: '#414D44',
     activeLiColor: '#3E6F00',
+    activeLiColorWithOpacith: 'rgba(62, 111, 0, 0.02)',
+
     headerNavBg: '#0E1726',
     mainBg: '#edeef1',
     mainGreen: '#00b04e',
