@@ -6,7 +6,7 @@ const colors = {
     amountColor: '#404D43',
     headerNavBg: '#0E1726',
     secondBg:'#fbfcfa',
-
+    grayColor: '#333333',
     mainBg: '#edeef1',
     mainGreen: '#00b04e',
     btnBgColor: '#1890ff',

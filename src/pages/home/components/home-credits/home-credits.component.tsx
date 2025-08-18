@@ -6,7 +6,7 @@ import {IHomeCredits} from './home-credits';
 import {HomeCreditsModel} from './model/home-credits.model';
 import colors from '../../../../assets/styles/abstracts/color';
 import {rem} from '../../../../assets/styles/abstracts/functions';
-import { ArrowSmallRight} from '../../../../assets/images/icons/arrows';
+import {ArrowRight, ArrowSmallRight} from '../../../../assets/images/icons/arrows';
 
 const HomeCreditsComponent = () => {
     const translate = useLocalization();
@@ -135,7 +135,7 @@ const HomeCreditsComponent = () => {
                                                 <h6>FIN code </h6>
                                                 <div className={classes.stringInput}>
                                                     <Input
-                                                        type="text"
+                                                        type='text'
                                                         bordered={false}
                                                         placeholder='ABCDEFG'
                                                     />
@@ -146,7 +146,7 @@ const HomeCreditsComponent = () => {
                                                 <div className={classes.stringInput}>
                                                     <h5>+994</h5>
                                                     <Input
-                                                        type="text"
+                                                        type='text'
                                                         bordered={false}
                                                         placeholder='00 000 00 00'
                                                     />
@@ -161,13 +161,13 @@ const HomeCreditsComponent = () => {
                                         <div className={'row'}>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                                                 <Checkbox>
-                                                    <p><a href="#">AKB RAZILIQ  </a> vəriləsi <br/> üçün icazə </p>
+                                                    <p><a href='#'>AKB RAZILIQ  </a> vəriləsi <br/> üçün icazə </p>
                                                 </Checkbox>
                                             </div>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                                                 <div className={classes.applyBtn}>
                                                     <p>Müraciət et</p>
-                                                    <ArrowSmallRight/>
+                                                    <ArrowRight/>
                                                 </div>
                                             </div>
 

@@ -153,32 +153,32 @@ const styles = {
         },
     },
     customSlider: {
-        railBg: "red",
-        "& .ant-slider-rail": {
+        railBg: 'red',
+        '& .ant-slider-rail': {
             backgroundColor: 'F1F1F1',
             height: 2,
             marginTop: rem(-15),
         },
-        "& .ant-slider-track": {
+        '& .ant-slider-track': {
             backgroundColor: colors.activeLiColor,
             height: 2,
             marginTop: rem(-15),
-            "&:hover": {
+            '&:hover': {
                 backgroundColor: colors.activeLiColor,
             },
         },
-        "& .ant-slider-handle": {
+        '& .ant-slider-handle': {
 
             marginTop: rem(-15),
             border: 'none',
             dotBorderColor: colors.activeLiColor,
             dotActiveBorderColor: colors.activeLiColor,
-            "&:hover": {
-                boxShadow: "none",
+            '&:hover': {
+                boxShadow: 'none',
 
             },
-            "&:focus": {
-                boxShadow: "none",
+            '&:focus': {
+                boxShadow: 'none',
             },
         },
 
