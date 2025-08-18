@@ -5,6 +5,8 @@ const colors = {
     activeLiColorWithOpacith: 'rgba(62, 111, 0, 0.02)',
 
     headerNavBg: '#0E1726',
+    secondBg:'#fbfcfa',
+
     mainBg: '#edeef1',
     mainGreen: '#00b04e',
     btnBgColor: '#1890ff',
