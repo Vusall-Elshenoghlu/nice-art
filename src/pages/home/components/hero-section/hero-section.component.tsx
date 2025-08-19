@@ -1,6 +1,6 @@
 import {useHeroSectionStyles} from './hero-section.style';
 import Button from '../../../../core/shared/button/button.component';
-import {ArrowSmallDown, ArrowSmallRight} from '../../../../assets/images/icons/arrows';
+import {ArrowRight, ArrowSmallDown} from '../../../../assets/images/icons/arrows';
 import useLocalization from '../../../../assets/lang';
 
 const HeroSectionComponent = () => {
@@ -17,7 +17,7 @@ const HeroSectionComponent = () => {
                         <div className={classes.buttons}>
                                     <Button className={classes.productsBtn}>
                                         <p>{translate('home_hero_productsBtn')}</p>
-                                        <ArrowSmallRight/>
+                                        <ArrowRight/>
                                     </Button>
                                     <Button className={classes.aboutBtn}>
                                         <p>{translate('home_hero_aboutBtn')}</p>
