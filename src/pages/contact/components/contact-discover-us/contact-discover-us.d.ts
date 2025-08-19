@@ -4,3 +4,8 @@ export interface IContactDiscoverus {
     location: string;
     callCenter: string;
 }
+
+export interface IContactImages {
+    id: number;
+    url: string;
+}

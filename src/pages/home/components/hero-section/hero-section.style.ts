@@ -3,7 +3,6 @@ import {rem} from '../../../../assets/styles/abstracts/functions';
 import colors from '../../../../assets/styles/abstracts/color';
 import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
-import fonts from '../../../../assets/styles/abstracts/fonts';
 
 const styles = {
     wrapper: {
@@ -65,6 +64,11 @@ const styles = {
         alignItems: 'center',
         flow: 'vertical',
         gap: rem(8),
+        cursor: 'pointer',
+        '&:hover': {
+            backgroundColor: colors.activeLiColorWithOpacith,
+        },
+
         '& p': {
             lineHeight: rem(24),
             fontSize: rem(16),

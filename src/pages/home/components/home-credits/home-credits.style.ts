@@ -8,7 +8,6 @@ const styles = {
         minHeight: rem(583),
         height: 'auto',
         position: 'relative',
-
         [breakpoint(breakpoints.tabletM)]: {
             height: 'auto',
             padding: rem(20),
@@ -112,7 +111,11 @@ const styles = {
 
         },
     },
-
+    amountText: {
+        fontWeight: '500',
+        fontSize: rem(16),
+        color: colors.amountColor
+    },
     input: {
         width: rem(226),
         height: rem(51),
@@ -210,6 +213,6 @@ const styles = {
             width: '100%',
         },
     },
-};
+}as const;
 
 export const useHomeCreditsStyles = createUseStyles(styles);

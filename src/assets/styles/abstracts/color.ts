@@ -3,6 +3,7 @@ const colors = {
     liColor: '#414D44',
     activeLiColor: '#3E6F00',
     activeLiColorWithOpacith: 'rgba(62, 111, 0, 0.02)',
+    footerColorWithOpacith: 'rgba(62, 111, 0, 0.04)',
     amountColor: '#404D43',
     headerNavBg: '#0E1726',
     secondBg:'#fbfcfa',

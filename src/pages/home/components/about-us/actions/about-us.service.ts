@@ -1,5 +1,5 @@
 import axiosInstance from '../../../../../core/configs/axios.config';
-import {IAboutUsVideo} from '../about-us';
+import {IAboutUsVideo} from '../home-about-us';
 import {API} from '../../../../../core/configs/api.config';
 import {AboutUsVideoModel} from '../model/about-us.model';
 

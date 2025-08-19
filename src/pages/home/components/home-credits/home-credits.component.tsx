@@ -1,12 +1,13 @@
 import useLocalization from '../../../../assets/lang';
 import {useHomeCreditsStyles} from './home-credits.style';
 import {useCallback, useMemo, useState} from 'react';
-import {Checkbox, Form, Input, message, Slider} from 'antd';
+import {Checkbox, Form, Input, message, Slider, Spin} from 'antd';
 import {IHomeCredits} from './home-credits';
 import {HomeCreditsModel} from './model/home-credits.model';
 import colors from '../../../../assets/styles/abstracts/color';
 import {rem} from '../../../../assets/styles/abstracts/functions';
-import {ArrowRight, ArrowSmallRight} from '../../../../assets/images/icons/arrows';
+import {ArrowRight} from '../../../../assets/images/icons/arrows';
+import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
 
 const HomeCreditsComponent = () => {
     const translate = useLocalization();
@@ -22,7 +23,6 @@ const HomeCreditsComponent = () => {
         if (!monthlyRate || !month) return 0;
         return (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -month));
     }, [amount, monthlyRate, month]);
-    console.log(monthlyPayment);
     const initialValues = {
         amount: 0,
         month: 0,
@@ -37,16 +37,25 @@ const HomeCreditsComponent = () => {
     const onFinishFailed = useCallback((errorInfo: any) => {
         message.error('Form submission failed:', errorInfo);
     }, [form]);
+
+    const {data: leads = [], isLoading} = useLeadQuery();
+    const heroLead = leads.find(lead => lead.id === 4);
+    if (isLoading) {
+        return (
+            <div className='d-flex justify-content-center align-items-center'>
+                <Spin size="large"/>
+            </div>
+        );
+    }
     return (
         <div className='mt-50 container'>
             <div className={classes.wrapper}>
                 <div className={'row'}>
                     <div className={'col-lg-1'}>
                         <div className={classes.leftDiv}>
-                            <h6>Apply to load</h6>
-                            <h1>Id duis id turpis mi
-                                quisque. Nulla.</h1>
-                            <p>Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu, augue.</p>
+                            <h6>{heroLead?.tag}</h6>
+                            <h1>{heroLead?.heading}</h1>
+                            <p>{translate('home_credits_description')}</p>
 
                         </div>
                     </div>
@@ -62,10 +71,10 @@ const HomeCreditsComponent = () => {
                                 >
                                     <div className={'row'}>
                                         <div className={'col-lg-4 col-md-4 col-sm-12'}>
-                                            <h6 className={classes.amountText}>Kreditin məbləği</h6>
+                                            <h6 className={classes.amountText}>{translate('home_credits_amount_credit')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{amount}</h2>
-                                                <h1>AZN</h1>
+                                                <h1>{translate('home_credits_money')}</h1>
                                             </div>
                                             <Slider
                                                 min={500}
@@ -83,10 +92,10 @@ const HomeCreditsComponent = () => {
                                             />
                                         </div>
                                         <div className={'col-lg-4 col-md-4 col-sm-12'}>
-                                            <h6 className={classes.amountText}>Kreditin müddəti</h6>
+                                            <h6 className={classes.amountText}>{translate('home_credits_time_credit')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{month}</h2>
-                                                <h1>Ay</h1>
+                                                <h1>{translate('home_credits_month')}</h1>
                                             </div>
                                             <Slider
                                                 min={6}
@@ -104,10 +113,10 @@ const HomeCreditsComponent = () => {
                                             />
                                         </div>
                                         <div className={'col-lg-4 col-md-4 col-sm-12'}>
-                                            <h6 className={classes.amountText}>Faiz dərəcəsi</h6>
+                                            <h6 className={classes.amountText}>{translate('home_credits_percent_degree')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{rate}</h2>
-                                                <h1>%</h1>
+                                                <h1>{translate('home_credits_percent')}</h1>
                                             </div>
                                             <Slider
                                                 min={1}
@@ -126,29 +135,28 @@ const HomeCreditsComponent = () => {
                                         </div>
 
                                     </div>
-                                    <p>Aylıq ödəniş</p>
+                                    <p>{translate('home_credits_monthly_payment')}</p>
                                     <h1>{monthlyPayment.toFixed(2)} ₼</h1>
-
-                                    <div className={classes.stringInputsDiv}>
+                                    <div>
                                         <div className={'mt-50 row'}>
                                             <div className={'col-lg-6 col-sm-6 col-md-12'}>
-                                                <h6>FIN code </h6>
+                                                <h6>{translate('home_credits_fin_code')}</h6>
                                                 <div className={classes.stringInput}>
                                                     <Input
                                                         type='text'
                                                         bordered={false}
-                                                        placeholder='ABCDEFG'
+                                                        placeholder={translate('home_credits_fin_code_placeholder')}
                                                     />
                                                 </div>
                                             </div>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
-                                                <h6>Əlaqə nömrəsi </h6>
+                                                <h6>{translate('home_credits_contact_number')} </h6>
                                                 <div className={classes.stringInput}>
-                                                    <h5>+994</h5>
+                                                    <h5>{translate('home_credits_number_prefix')}</h5>
                                                     <Input
                                                         type='text'
                                                         bordered={false}
-                                                        placeholder='00 000 00 00'
+                                                        placeholder={translate('home_credits_number_placeholder')}
                                                     />
                                                 </div>
                                             </div>
@@ -161,16 +169,15 @@ const HomeCreditsComponent = () => {
                                         <div className={'row'}>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                                                 <Checkbox>
-                                                    <p><a href='#'>AKB RAZILIQ  </a> vəriləsi <br/> üçün icazə </p>
+                                                    <p><a href='#'>{translate('home_credits_AKB')} </a> {translate('home_credits_AKB_second_part')} <br/> {translate('home_credits_AKB_third_part')} </p>
                                                 </Checkbox>
                                             </div>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                                                 <div className={classes.applyBtn}>
-                                                    <p>Müraciət et</p>
+                                                    <p>{translate('home_credits_apply')}</p>
                                                     <ArrowRight/>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
 

@@ -1,4 +1,4 @@
-import {IAboutUsVideo, IFileModel} from '../about-us';
+import {IAboutUsVideo, IFileModel} from '../home-about-us';
 
 export class AboutUsVideoModel {
     public id!: number;

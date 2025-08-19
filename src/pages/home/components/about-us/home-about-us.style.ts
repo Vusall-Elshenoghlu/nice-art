@@ -5,10 +5,7 @@ import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
 
 const styles = {
-    conntainerr: {
-        width: '100%',
-        height: 'auto',
-    },
+
     wrapper: {
         marginTop: rem(200),
         width: '100%',
