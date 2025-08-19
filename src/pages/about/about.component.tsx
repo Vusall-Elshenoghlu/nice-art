@@ -6,6 +6,7 @@ import {Routes} from '../../router/routes';
 import mainImg from '/src/assets/images/statics/about-page-image.png';
 import {FingerPrint} from '../../assets/images/icons/finger-print';
 import {rem} from '../../assets/styles/abstracts/functions';
+import {useLeadQuery} from "../../core/shared/leads/actions/leads.queries";
 
 const AboutComponent = () => {
     const classes = useAboutStyles();
@@ -36,6 +37,10 @@ const AboutComponent = () => {
             text:'Pulvinar amet ullamcorper nec nullam accumsan, iaculis risus. Feugiat nulla ni imperdiet tellus sit lobortis. Cursus adipiscing aliquam dignissim.',
         }
     ];
+
+    const {data:products=[], isLoading}=useLeadQuery();
+    const filteredProducts=products.filter(products => products.tag==='About');
+    if (isLoading) return <div>Loading...</div>;
     return (
         <div className={'container'}>
             <div className={classes.homeIconSection}>
@@ -44,21 +49,22 @@ const AboutComponent = () => {
                 <h2>About Us</h2>
             </div>
 
-            <div className={classes.aboutTitleSection}>
-                <div className={classes.firstTitle}>
-                    <h1>Title for about us<br/>or Lorem Ipsum<br/>motto</h1>
-                </div>
-                <div className={classes.secondTitle}>
-                    <p className={classes.bizKimik}>Biz kimik?</p>
-                    <h1>Lectus mauris pulvinar<br/>sit?</h1>
-                    <p className={classes.description}>
-                        Vehicula elit est, neque non mattis pharetra, urna lectus magnis. Ultricies tellus
-                        adipiscing a sem ultrices eu pulvinar. Urna egestas est aliquet facilisis elit sit. Massa
-                        libero turpis facilisi mattis sit ac consectetur malesuada et. Urna, orci arcu senectus
-                        mattis nam euismod cum cursus. Enim nunc quis commodo leo libero diam.
-                    </p>
-                </div>
-            </div>
+            {
+                filteredProducts.map(({id, heading, description})=>{
+                    return(
+                        <div key={id} className={classes.aboutTitleSection}>
+                            <div className={classes.firstTitle}>
+                                <h1>Title for about us<br/>or Lorem Ipsum<br/>motto</h1>
+                            </div>
+                            <div className={classes.secondTitle}>
+                                <p className={classes.bizKimik}>Biz kimik?</p>
+                                <h1>{heading}</h1>
+                                <p className={classes.description}>{description}</p>
+                            </div>
+                        </div>
+                    );
+                })
+            }
             <div className={classes.imgSection}>
                 <img src={mainImg} alt='mainImg' />
             </div>
