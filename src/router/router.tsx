@@ -7,7 +7,7 @@ import {Routes} from './routes';
 import NotFound from 'pages/not-found/notfound.component';
 import AboutComponent from '../pages/about/about.component';
 import ContactComponent from '../pages/contact/contact.component';
-import ProductsComponent from '../pages/products/products.component';
+import ProductsPageComponent from '../pages/products/products-page.component';
 import PartnersComponent from '../pages/partners/partners.component';
 
 const router = createBrowserRouter([
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: Routes.products,
-                element: <ProductsComponent/>,
+                element: <ProductsPageComponent/>,
             },
             {
                 path: Routes.partners,
