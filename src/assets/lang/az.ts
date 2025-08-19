@@ -70,6 +70,17 @@ export const az = {
     contact_discover_subtitle: 'Feel free to get in touch with us through our channels:',
     contact_discover_email: 'Email Us',
     contact_discover_call: 'Call Us',
+    contact_form_email: 'E-poçt',
+    contact_form_email_placeholder: 'javidan.nasib@gmail.com',
+    contact_form_topic: 'Mövzu',
+    contact_form_topic_placeholder: 'Mövzu seçib',
+    contact_form_message: 'Mesajınız',
+    contact_form_message_placeholder: 'Mesajınızı daxil edin.',
+    contact_form_submit: 'Submit',
+
+
+    //Partners
+    partners_hero_btn: 'Became a partner',
 
 
 

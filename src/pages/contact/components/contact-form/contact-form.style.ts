@@ -5,8 +5,6 @@ import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
 const styles = {
     wrapper: {
-        display: 'flex',
-        alignItems: 'center',
         marginTop: rem(150),
         width: '100%',
         minHeight: '60vh',
@@ -18,7 +16,11 @@ const styles = {
         fontSize: rem(60),
         lineHeight: '100%',
         letterSpacing: '0%',
-        color: colors.activeLiColor
+        color: colors.activeLiColor,
+    },
+    contact: {
+        padding:  rem(15),
+        marginTop: rem(15),
     },
     description: {
         marginTop:  rem(20),
@@ -27,9 +29,16 @@ const styles = {
         lineHeight: rem(22),
         letterSpacing: '0%',
     },
+    labetInput: {
+        fontSize: rem(14),
+        fontWeight: '400',
+        lineHeight: '100%',
+        letterSpacing: '0%',
+        color: colors.amountColor
+    },
     stringInput: {
         marginTop: rem(6),
-        width: rem(315),
+        width: 'auto',
         height: rem(51),
         borderRadius: rem(4),
         backgroundColor: colors.mainBGColor,
@@ -37,11 +46,43 @@ const styles = {
         paddingLeft: rem(15),
         display: 'flex',
         alignItems: 'center',
-
         [breakpoint(breakpoints.tabletM)]: {
             width: '100%',
         },
     },
+    prefix: {
+        fontWeight: '700',
+        fontSize: rem(16),
+        lineHeight: '100%',
+        letterSpacing: '0%',
+        color: colors.amountColor,
+        opacity: '60%'
+    },
+    submitBtn: {
+        width: '100%',
+        height: rem(48),
+        borderRadius: rem(8),
+        backgroundColor: colors.activeLiColor,
+        border: '1px solid #F1F1F1',
+        cursor: 'pointer',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: rem(15),
+        '& h5': {
+            fontSize: rem(16),
+            lineHeight: rem(24),
+            letterSpacing: '0%',
+            color: colors.mainBGColor
+        }
+    },
+    iframe: {
+        marginTop: rem(100),
+        width: '100%',
+        height: rem(440),
+        border: 'none',
+        opacity: 0.2,
+    }
 };
 
 export const useContactFormStyles = createUseStyles(styles);
