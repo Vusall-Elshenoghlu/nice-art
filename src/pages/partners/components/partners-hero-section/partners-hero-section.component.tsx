@@ -13,7 +13,6 @@ const PartnersHeroSectionComponent = () => {
     const classes = usePartnerHeroSectionStyles();
     const {data: leads = [], isLoading} = useLeadQuery();
     const heroLead = leads.find(lead => lead.id === 9);
-    console.log(heroLead);
     if (isLoading) {
         return (
             <div className="d-flex justify-content-center align-items-center">
@@ -26,7 +25,7 @@ const PartnersHeroSectionComponent = () => {
             <div className={classes.homeIconSection}>
                 <Link to={Routes.home}><HomeIcon/></Link>
                 <ArrowSmallRight/>
-                <h2>About Us</h2>
+                <h2>{translate('navbar_partners')}</h2>
             </div>
 
             <div className={'row'}>

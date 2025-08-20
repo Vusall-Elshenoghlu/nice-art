@@ -81,6 +81,28 @@ export const az = {
 
     //Partners
     partners_hero_btn: 'Became a partner',
+    partners_companies_visit: 'Visit Website',
+    partners_companies_close: 'Close',
+
+
+    //Footer
+
+    footer_logo_alt: 'Footer logo',
+    footer_subtitle: 'Lorem ipsum dolor sit amet consectetur  adipiscing elit aliquam',
+    footer_site: 'Site',
+    footer_home: 'Home page',
+    footer_about: 'About us',
+    footer_products: 'Products',
+    footer_partners: 'Partners',
+    footer_contact: 'Contact us',
+    footer_contact_company: 'contact@company.com',
+    footer_phone_company: '(414) 687 - 5892',
+    footer_location: 'Location of company',
+    footer_copyright: 'Copyright Ⓒ ',
+    footer_author: ' Javidan Nasib',
+    footer_all_rights: 'All Rights Reserved',
+    footer_terms: 'Terms and Conditions',
+    footer_privacy: 'Privacy Policy',
 
 
 

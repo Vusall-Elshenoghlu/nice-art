@@ -81,7 +81,6 @@ const styles = {
         width: '100%',
         height: rem(440),
         border: 'none',
-        opacity: 0.2,
     }
 };
 

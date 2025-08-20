@@ -6,6 +6,7 @@ const colors = {
     footerColorWithOpacith: 'rgba(62, 111, 0, 0.04)',
     partnerColorWithOpacith: 'rgba(62, 111, 0, 0.04)',
     amountColor: '#404D43',
+    footer_copy_right_color: '#6F6C90',
     headerNavBg: '#0E1726',
     secondBg:'#fbfcfa',
     grayColor: '#333333',

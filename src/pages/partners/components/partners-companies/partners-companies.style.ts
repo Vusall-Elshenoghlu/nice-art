@@ -1,6 +1,8 @@
 import {createUseStyles} from 'react-jss';
 import {rem} from '../../../../assets/styles/abstracts/functions';
 import colors from '../../../../assets/styles/abstracts/color';
+import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
+import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
 
 const styles = {
     partnerDiv: {
@@ -10,8 +12,9 @@ const styles = {
         borderRadius: rem(16),
         border: `${rem(1)} solid ${colors.activeLiColorWithOpacith}`,
         backgroundColor: colors.mainBGColor,
-        boxShadow:'0px 0px 4px 0px #3E6F000A',
+        boxShadow: '0px 0px 4px 0px #3E6F000A',
         padding: rem(16),
+        cursor: 'pointer',
         '& h4': {
             fontWeight: '500',
             fontSize: rem(16),
@@ -43,7 +46,112 @@ const styles = {
             letterSpacing: '0%',
             textTransform: 'uppercase',
         }
+    },
+    customModal: {
+        "& .ant-modal-body": {
+            padding: '0px !important',
+        },
+        "& .ant-modal-mask": {
+            opacity: '0.1',
+            height: rem(900),
+            overflow: 'hidden',
+
+        },
+        "& .ant-modal-content": {
+            backgroundColor: '#F7F9F5',
+            borderRadius: 12,
+            height: rem(318),
+            borderRadiusCircle: rem(16),
+            display: 'flex',
+            flexDirection: 'column',
+        }
+    },
+
+    modalFlexDiv: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: rem(16),
+        flexWrap: 'wrap',
+        '& h4': {
+            fontWeight: '500',
+            fontSize: rem(20),
+            lineHeight: '100%',
+        }
+    },
+    modalImg: {
+        width: rem(60),
+        height: rem(60),
+        objectFit: 'contain',
+        flexShrink: 0,
+    },
+    modalDescrip: {
+        marginTop: rem(10),
+        fontWeight: '400',
+        fontSize: rem(16),
+        lineHeight: rem(22),
+        color: colors.liColor,
+    },
+    selectedTagDiv: {
+        width: 'auto',
+        height: rem(14),
+        borderRadius: rem(4),
+        backgroundColor: colors.partnerColorWithOpacith,
+        marginTop: rem(10),
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        '& p': {
+            color: colors.activeLiColor,
+            fontSize: rem(8),
+            fontWeight: '500',
+            lineHeight: '100%',
+            letterSpacing: '0%',
+            textTransform: 'uppercase',
+        }
+    },
+    buttons: {
+        width: '100%',
+        display: 'flex',
+        marginTop: '20%',
+        gap: rem(26),
+    },
+    visitBtn: {
+        width: rem(282),
+        height: rem(48),
+        borderRadius: rem(8),
+        display: 'flex',
+        gap: rem(6),
+
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.activeLiColor,
+        border: 'none',
+        cursor: 'pointer',
+        '& a': {
+            fontWeight: '400',
+            fontSize: rem(16),
+            lineHeight: rem(24),
+            letterSpacing: '0%',
+            color: colors.mainBGColor,
+        }
+    },
+    closeBtn: {
+        width: rem(282),
+        height: rem(48),
+        borderRadius: rem(8),
+        backgroundColor: 'transparent',
+        cursor: 'pointer',
+        border: `${rem(1)} solid ${colors.activeLiColor}`,
+        '&': {
+            fontWeight: '400',
+            fontSize: rem(16),
+            lineHeight: rem(24),
+            letterSpacing: '0%',
+            color: colors.activeLiColor,
+        }
+
     }
+
 };
 
 export const usePartnersCompaniesStyles = createUseStyles(styles);

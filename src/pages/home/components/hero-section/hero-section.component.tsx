@@ -12,8 +12,8 @@ const HeroSectionComponent = () => {
     const heroLead = leads.find(lead => lead.id === 1);
     if (isLoading) {
         return (
-            <div className="d-flex justify-content-center align-items-center" style={{height: "300px"}}>
-                <Spin size="large" />
+            <div className='d-flex justify-content-center align-items-center'>
+                <Spin size='large' />
             </div>
         );
     }
