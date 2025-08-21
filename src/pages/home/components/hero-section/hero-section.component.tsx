@@ -4,6 +4,8 @@ import {ArrowRight, ArrowSmallDown} from '../../../../assets/images/icons/arrows
 import useLocalization from '../../../../assets/lang';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
 import {Spin} from 'antd';
+import {Link} from 'react-router-dom';
+import {Routes} from '../../../../router/routes';
 
 const HeroSectionComponent = () => {
     const classes = useHeroSectionStyles();
@@ -26,14 +28,18 @@ const HeroSectionComponent = () => {
                     <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                         <p className={classes.malesudaParagraph}>{heroLead?.description} </p>
                         <div className={classes.buttons}>
-                                    <Button className={classes.productsBtn}>
-                                        <p>{translate('home_hero_productsBtn')}</p>
-                                        <ArrowRight/>
-                                    </Button>
-                                    <Button className={classes.aboutBtn}>
-                                        <p>{translate('home_hero_aboutBtn')}</p>
-                                        <ArrowSmallDown/>
-                                    </Button>
+                                   <Link to={Routes.products}>
+                                       <Button className={classes.productsBtn}>
+                                           <p>{translate('home_hero_productsBtn')}</p>
+                                           <ArrowRight/>
+                                       </Button>
+                                   </Link>
+                                    <Link to={Routes.about}>
+                                        <Button className={classes.aboutBtn}>
+                                            <p>{translate('home_hero_aboutBtn')}</p>
+                                            <ArrowSmallDown/>
+                                        </Button>
+                                    </Link>
 
                             </div>
                         </div>
