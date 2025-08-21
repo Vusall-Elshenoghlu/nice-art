@@ -9,6 +9,7 @@ import AboutComponent from '../pages/about/about.component';
 import ContactComponent from '../pages/contact/contact.component';
 import ProductsPageComponent from '../pages/products/products-page.component';
 import PartnersComponent from '../pages/partners/partners.component';
+import ProductDetailComponent from '../pages/products-detail/product-detail.component';
 
 const router = createBrowserRouter([
     {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: Routes.products,
                 element: <ProductsPageComponent/>,
+            },
+            {
+                path: Routes.products_detail,
+                element: <ProductDetailComponent/>,
             },
             {
                 path: Routes.partners,

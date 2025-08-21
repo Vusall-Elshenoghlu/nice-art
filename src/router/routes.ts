@@ -10,6 +10,7 @@ export enum Routes {
     welcome = '/welcome-user',
     about = '/about',
     products = '/products',
+    products_detail='/products/:id',
     partners = '/partners',
     contact = '/contact',
 }

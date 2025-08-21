@@ -1,5 +1,6 @@
 import {useProductsSectionStyles} from './products-section.style';
 import {useProductsQuery} from './actions/products-section.queries';
+import {Link} from 'react-router-dom';
 
 const ProductsSectionComponent = () => {
     const classes = useProductsSectionStyles();
@@ -51,10 +52,12 @@ const ProductsSectionComponent = () => {
                                         </div>
                                     </div>
 
-                                    <button className={classes.applyButton}>
-                                        Apply loan
-                                        <span className={classes.arrow}>→</span>
-                                    </button>
+                                   <Link to={`/products/${product.id}`}>
+                                       <button className={classes.applyButton}>
+                                           Apply loan
+                                           <span className={classes.arrow}>→</span>
+                                       </button>
+                                   </Link>
 
                                 </div>
 
