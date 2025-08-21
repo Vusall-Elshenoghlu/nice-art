@@ -84,6 +84,20 @@ export const az = {
     partners_companies_visit: 'Visit Website',
     partners_companies_close: 'Close',
 
+    //About
+    about_title:`Title for about us \n or Lorem Ipsum \n motto`,
+    about_who_we_are:'Biz kimik ?',
+    about_breadcrumb_title: 'Haqqımızda',
+    about_loading: 'Yüklənir...',
+    about_purpose: 'Məqsədimiz',
+    about_purpose_subtitle: 'Id duis id turpis mi quisque. Nulla.',
+    about_purpose_description: 'Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu, augue. Egestas et amet neque placerat aliquam tempo',
+    about_no_purposes: 'Məqsəd tapılmadı',
+    about_main_image_alt: 'Haqqımızda şəkil',
+
+    about_strategy: 'Strategiyamız',
+    about_strategy_subtitle: 'Id duis id turpis mi quisque. Nulla.',
+    about_no_strategies: 'Strategiya tapılmadı',
 
     //Footer
 
