@@ -22,7 +22,7 @@ const HomeProductsComponent = () => {
                         <h1 className={'mt-20'}>{heroLead?.heading}</h1>
                     </div>
                     <div className={'col-lg-6 col-md-6 col-sm-12'}>
-                        <p>{heroLead.description}</p>
+                        <p>{heroLead?.description}</p>
                     </div>
 
                 </div>

@@ -152,7 +152,7 @@ const HomeCreditsComponent = () => {
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                                                 <h6>{translate('home_credits_contact_number')} </h6>
                                                 <div className={classes.stringInput}>
-                                                    <h5>{translate('home_credits_number_prefix')}</h5>
+                                                    <h5 className={classes.prefix}>{translate('home_credits_number_prefix')}</h5>
                                                     <Input
                                                         type='text'
                                                         bordered={false}

@@ -53,27 +53,29 @@ const PartnersCompaniesComponent = () => {
                                 closable={false}
                                 rootClassName={classes.customModal}
                             >
-                                    <div className={classes.modalFlexDiv}>
-                                        <img src={selectedPartner?.file?.url} className={classes.modalImg} alt={translate('partners_hero_btn')}/>
-                                        <div>
-                                            <h4>{selectedPartner?.name}</h4>
-                                            <div className={classes.selectedTagDiv}>
-                                                <p>{selectedPartner?.tag}</p>
-                                            </div>
+                                <div className={classes.modalFlexDiv}>
+                                    <img src={selectedPartner?.file?.url} className={classes.modalImg}
+                                         alt={translate('partners_hero_btn')}/>
+                                    <div>
+                                        <h4>{selectedPartner?.name}</h4>
+                                        <div className={classes.selectedTagDiv}>
+                                            <p>{selectedPartner?.tag}</p>
                                         </div>
                                     </div>
-                                    <h5 className={classes.modalDescrip}>{selectedPartner?.description}</h5>
-                                    <div className={classes.buttons}>
-                                         <Button className={classes.visitBtn}>
-                                             <a href={selectedPartner?.site} target={'_blank'}>{translate('partners_companies_visit')}</a>
-                                             <ArrowRightUp/>
+                                </div>
+                                <h5 className={classes.modalDescrip}>{selectedPartner?.description}</h5>
+                                <div className={classes.buttons}>
+                                    <Button className={classes.visitBtn}>
+                                        <a href={selectedPartner?.site}
+                                           target={'_blank'}>{translate('partners_companies_visit')}</a>
+                                        <ArrowRightUp/>
 
                                     </Button>
-                                        <Button className={classes.closeBtn} onClick={() => setIsModalOpen(false)}>
-                                            <p>Close</p>
-                                        </Button>
+                                    <Button className={classes.closeBtn} onClick={() => setIsModalOpen(false)}>
+                                        <p>Close</p>
+                                    </Button>
 
-                                    </div>
+                                </div>
 
                             </Modal>
                         </div>

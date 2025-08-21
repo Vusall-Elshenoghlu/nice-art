@@ -145,6 +145,7 @@ export const az = {
     products_detail_loading: 'Yüklənir...',
     products_detail_not_found: 'Məhsul tapılmadı',
     products_detail_products: 'Məhsullar',
+    products_detail_form_submission_failed: 'Form submission failed',
 
 
 

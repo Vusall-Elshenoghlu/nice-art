@@ -4,9 +4,11 @@ import colors from 'assets/styles/abstracts/color';
 import fonts from 'assets/styles/abstracts/fonts';
 import {breakpoint} from '../../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../../assets/styles/abstracts/sizes';
+
 interface HeaderProps {
     isProductDetail: boolean;
 }
+
 const styles = {
 
     headerSection: (props: HeaderProps) => ({
@@ -122,6 +124,10 @@ const styles = {
         },
     },
 
+    activeLink: {
+        color: `${colors.activeLiColor} !important`,
+    },
+
     navLink: {
         color: colors.liColor,
         fontFamily: fonts.mainFont,
@@ -132,9 +138,7 @@ const styles = {
         '&:hover': {
             color: colors.activeLiColor,
         },
-        '&.active': {
-            color: colors.activeLiColor,
-        },
+
 
         [breakpoint(1200)]: {
             fontSize: rem(15),
@@ -150,7 +154,11 @@ const styles = {
             padding: `${rem(4)} ${rem(1)}`,
         },
     },
-
+    logoAndLink: {
+        display: 'flex',
+        alignItems: 'center',
+        gap: rem(2),
+    }
 
 
 };

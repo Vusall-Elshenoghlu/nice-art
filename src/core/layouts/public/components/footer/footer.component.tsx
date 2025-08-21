@@ -20,17 +20,17 @@ const FooterComponent = () => {
     const translate = useLocalization();
 
     const siteLinks = [
-        { label: 'footer_home', to: Routes.home },
-        { label: 'footer_about', to: Routes.about },
-        { label: 'footer_products', to: Routes.products },
-        { label: 'footer_partners', to: Routes.partners },
-        { label: 'footer_contact', to: Routes.contact },
+        { label: translate('footer_home'), to: Routes.home },
+        { label: translate('footer_about'), to: Routes.about },
+        { label: translate('footer_products'), to: Routes.products },
+        { label: translate('footer_partners'), to: Routes.partners },
+        { label: translate('footer_contact'), to: Routes.contact },
     ];
 
     const contactInfo = [
-        { icon: <EmailFooterIcon/>, text: 'footer_contact_company' },
-        { icon: <PhoneFooterIcon/>, text: 'footer_phone_company' },
-        { icon: <LocationFooterIcon/>, text: 'footer_location' },
+        { icon: <EmailFooterIcon/>, text: translate('footer_contact_company') },
+        { icon: <PhoneFooterIcon/>, text: translate('footer_phone_company') },
+        { icon: <LocationFooterIcon/>, text: translate('footer_location') },
     ];
 
     return (
@@ -60,7 +60,7 @@ const FooterComponent = () => {
                                             to={to}
                                         >
                                             <p className={`${classes.footerParagraph} ${index === 0 ? 'mt-50' : ''}`}>
-                                                {translate(label)}
+                                                {label}
                                             </p>
                                         </Link>
                                     ))}
@@ -76,7 +76,7 @@ const FooterComponent = () => {
                                             className={`${classes.footerContactDiv} ${index === 0 ? 'mt-50' : ''}`}
                                         >
                                             {icon}
-                                            <p>{translate(text)}</p>
+                                            <p>{text}</p>
                                         </div>
                                     ))}
                                 </div>

@@ -64,6 +64,8 @@ const styles = {
             borderRadiusCircle: rem(16),
             display: 'flex',
             flexDirection: 'column',
+            position: 'relative',
+            overflow: 'hidden',
         }
     },
 
@@ -110,10 +112,15 @@ const styles = {
         }
     },
     buttons: {
+        position: 'absolute',
+        bottom: 10,
         width: '100%',
         display: 'flex',
-        marginTop: '20%',
         gap: rem(26),
+        [breakpoint(breakpoints.tabletM)]: {
+            display: 'flex',
+            gap: rem(5),
+        },
     },
     visitBtn: {
         width: rem(282),
@@ -127,6 +134,9 @@ const styles = {
         backgroundColor: colors.activeLiColor,
         border: 'none',
         cursor: 'pointer',
+        [breakpoint(breakpoints.tabletM)]: {
+            width: rem(150),
+        },
         '& a': {
             fontWeight: '400',
             fontSize: rem(16),
@@ -140,8 +150,13 @@ const styles = {
         height: rem(48),
         borderRadius: rem(8),
         backgroundColor: 'transparent',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         cursor: 'pointer',
-        border: `${rem(1)} solid ${colors.activeLiColor}`,
+        [breakpoint(breakpoints.tabletM)]: {
+            width: rem(150),
+        },
         '&': {
             fontWeight: '400',
             fontSize: rem(16),

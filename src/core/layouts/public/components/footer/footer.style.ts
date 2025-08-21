@@ -86,6 +86,7 @@ const styles = {
         color: colors.footer_copy_right_color,
         '& a': {
             color: colors.activeLiColor,
+            textDecoration: 'underline'
         }
     }
 };

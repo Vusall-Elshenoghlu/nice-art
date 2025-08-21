@@ -37,7 +37,7 @@ const ProductApplyCreditComponent = () => {
     }, [form]);
 
     const onFinishFailed = useCallback((errorInfo: any) => {
-        message.error(translate('form_submission_failed') || 'Form submission failed');
+        message.error(translate('products_detail_form_submission_failed') || 'Form submission failed');
     }, [form, translate]);
 
     return (
@@ -137,7 +137,7 @@ const ProductApplyCreditComponent = () => {
                                         <div className={'col-lg-6 col-md-6 col-sm-12'}>
                                             <h6>{translate('product_apply_contact_number')}</h6>
                                             <div className={classes.stringInput}>
-                                                <h5>+994</h5>
+                                                <h5 className={classes.prefix}>{translate('home_credits_number_prefix')}</h5>
                                                 <Input
                                                     type='text'
                                                     bordered={false}

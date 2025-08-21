@@ -52,8 +52,6 @@ const styles = {
             position: 'relative',
             width: '100%',
             marginBottom: rem(20),
-            textAlign: 'center',
-            alignItems: 'center',
         },
         [breakpoint(breakpoints.mobileL)]: {
             '& h1': {
@@ -212,6 +210,14 @@ const styles = {
         [breakpoint(breakpoints.tabletM)]: {
             width: '100%',
         },
+    },
+    prefix: {
+        fontWeight: '700',
+        fontSize: rem(16),
+        lineHeight: '100%',
+        letterSpacing: '0%',
+        color: colors.amountColor,
+        opacity: '60%'
     },
 }as const;
 

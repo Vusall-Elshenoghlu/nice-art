@@ -5,10 +5,11 @@ import HeaderModalComponent from '../header-modal/header-modal.component';
 import useLocalization from '../../../../../assets/lang';
 import { Routes } from 'router/routes';
 import { useHeaderNavbarStyles } from './header-navbar.style';
+import {NavbarMiniLogoIcon} from '../../../../../assets/images/icons/arrows';
 
 const HeaderNavbarComponent = () => {
     const location = useLocation();
-    const isProductDetail = matchPath({ path: '/products/:id', end: true }, location.pathname) !== null;
+    const isProductDetail = matchPath({ path: `${Routes.products}/:id`, end: true }, location.pathname) !== null;
     const classes = useHeaderNavbarStyles({ isProductDetail });
 
     const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -46,7 +47,19 @@ const HeaderNavbarComponent = () => {
                                     <ul className={`${classes.navItems} d-flex`}>
                                         {navLinks.map(({ to, label }) => (
                                             <li key={to} className="me-4">
-                                                <NavLink to={to} className={classes.navLink}>{label}</NavLink>
+                                                <NavLink
+                                                    to={to}
+                                                    className={({ isActive }) =>
+                                                        `${classes.navLink} ${isActive ? classes.activeLink : ''}`
+                                                    }
+                                                >
+                                                    {({ isActive }) => (
+                                                        <div className={classes.logoAndLink}>
+                                                            {isActive && <NavbarMiniLogoIcon />}
+                                                            {label}
+                                                        </div>
+                                                    )}
+                                                </NavLink>
                                             </li>
                                         ))}
                                     </ul>
