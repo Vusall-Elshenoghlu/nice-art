@@ -104,7 +104,7 @@ export const az = {
     products_breadcrumb_title: 'Məhsullar',
     products_title: 'Məhsullar üçün başlıq \n və ya Lorem Ipsum \n şüar',
 
-    // Products Section
+    // Products Section Component
     products_section_loading: 'Yüklənir...',
     products_section_error: 'Məhsullar yüklənərkən səhv baş verdi',
     products_section_no_products: 'Məhsul tapılmadı',
@@ -113,6 +113,40 @@ export const az = {
     products_section_percentage: 'Faiz dərəcəsi (%)',
     products_section_apply_loan: 'Kredit üçün müraciət et',
     products_section_image_alt: 'Məhsul şəkli',
+
+    // Product Apply Credit Component
+    product_apply_title: 'Kredit üçün müraciət',
+    product_apply_subtitle: 'Id duis id turpis mi quisque. Nulla.',
+    product_apply_description: 'Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu, augue.',
+    product_apply_amount: 'Kreditin məbləği',
+    product_apply_currency: 'AZN',
+    product_apply_month: 'Kreditin müddəti',
+    product_apply_month_label: 'Ay',
+    product_apply_rate: 'Faiz dərəcəsi',
+    product_apply_percent: '%',
+    product_apply_monthly_payment: 'Aylıq ödəniş',
+    product_apply_fin_code: 'FIN code',
+    product_apply_fin_code_placeholder: 'ABCDEFG',
+    product_apply_contact_number: 'Əlaqə nömrəsi',
+    product_apply_contact_number_placeholder: '00 000 00 00',
+    product_apply_checkbox: 'AKB RAZILIQ vəriləsi üçün icazə',
+    product_apply_button: 'Müraciət et',
+    // Product Detail Credits Component
+    product_detail_loading: 'Yüklənir...',
+    product_detail_not_found: 'Məhsul tapılmadı',
+    product_detail_no_info: 'Kredit məlumatı mövcud deyil',
+    product_detail_title: 'Kredit Haqqında',
+    product_detail_amount: 'Kreditin məbləği (AZN)',
+    product_detail_initial_payment: 'Kreditin ilkin ödənişi (%)',
+    product_detail_percentage: 'Kreditin faiz dərəcəsi (%)',
+    product_detail_period: 'Kreditin müddəti (ay)',
+    product_detail_comission: 'Kreditin razılaşdırılması üçün kommisiya haqqı (%)',
+    // Products Detail Header
+    products_detail_loading: 'Yüklənir...',
+    products_detail_not_found: 'Məhsul tapılmadı',
+    products_detail_products: 'Məhsullar',
+
+
 
 
     //Footer

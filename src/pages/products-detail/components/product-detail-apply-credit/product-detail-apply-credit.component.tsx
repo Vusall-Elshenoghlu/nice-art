@@ -22,7 +22,7 @@ const ProductApplyCreditComponent = () => {
         if (!monthlyRate || !month) return 0;
         return (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -month));
     }, [amount, monthlyRate, month]);
-    console.log(monthlyPayment);
+
     const initialValues = {
         amount: 0,
         month: 0,
@@ -30,24 +30,25 @@ const ProductApplyCreditComponent = () => {
         finCode: '',
         contactNumber: ''
     };
+
     const onFinish = useCallback((values: IHomeCredits) => {
         console.log('Credit values:', new HomeCreditsModel(values));
         form.resetFields();
     }, [form]);
+
     const onFinishFailed = useCallback((errorInfo: any) => {
-        message.error('Form submission failed:', errorInfo);
-    }, [form]);
+        message.error(translate('form_submission_failed') || 'Form submission failed');
+    }, [form, translate]);
+
     return (
         <div className='mt-50 container'>
             <div className={classes.wrapper}>
                 <div className={'row'}>
                     <div className={'col-lg-1'}>
                         <div className={classes.leftDiv}>
-                            <h6>Apply to load</h6>
-                            <h1>Id duis id turpis mi
-                                quisque. Nulla.</h1>
-                            <p>Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu, augue.</p>
-
+                            <h6>{translate('product_apply_title')}</h6>
+                            <h1>{translate('product_apply_subtitle')}</h1>
+                            <p>{translate('product_apply_description')}</p>
                         </div>
                     </div>
                     <div className={'col-lg-11'}>
@@ -58,14 +59,13 @@ const ProductApplyCreditComponent = () => {
                                     name={'credit'}
                                     onFinish={onFinish}
                                     onFinishFailed={onFinishFailed}
-
                                 >
                                     <div className={'row'}>
                                         <div className={'col-lg-4 col-md-4 col-sm-12'}>
-                                            <h6 className={classes.amountText}>Kreditin məbləği</h6>
+                                            <h6 className={classes.amountText}>{translate('product_apply_amount')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{amount}</h2>
-                                                <h1>AZN</h1>
+                                                <h1>{translate('product_apply_currency')}</h1>
                                             </div>
                                             <Slider
                                                 min={500}
@@ -78,15 +78,13 @@ const ProductApplyCreditComponent = () => {
                                                 trackStyle={{backgroundColor: colors.activeLiColor, height: rem(2)}}
                                                 railStyle={{height: rem(2)}}
                                                 handleStyle={{width: rem(2), height: rem(2), border: 'none'}}
-
-
                                             />
                                         </div>
                                         <div className={'col-lg-4 col-md-4 col-sm-12'}>
-                                            <h6 className={classes.amountText}>Kreditin müddəti</h6>
+                                            <h6 className={classes.amountText}>{translate('product_apply_month')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{month}</h2>
-                                                <h1>Ay</h1>
+                                                <h1>{translate('product_apply_month_label')}</h1>
                                             </div>
                                             <Slider
                                                 min={6}
@@ -99,15 +97,13 @@ const ProductApplyCreditComponent = () => {
                                                 trackStyle={{backgroundColor: colors.activeLiColor, height: rem(2)}}
                                                 railStyle={{height: rem(2)}}
                                                 handleStyle={{width: rem(2), height: rem(2), border: 'none'}}
-
-
                                             />
                                         </div>
                                         <div className={'col-lg-4 col-md-4 col-sm-12'}>
-                                            <h6 className={classes.amountText}>Faiz dərəcəsi</h6>
+                                            <h6 className={classes.amountText}>{translate('product_apply_rate')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{rate}</h2>
-                                                <h1>%</h1>
+                                                <h1>{translate('product_apply_percent')}</h1>
                                             </div>
                                             <Slider
                                                 min={1}
@@ -120,57 +116,50 @@ const ProductApplyCreditComponent = () => {
                                                 trackStyle={{backgroundColor: colors.activeLiColor, height: rem(2)}}
                                                 railStyle={{height: rem(2)}}
                                                 handleStyle={{width: rem(2), height: rem(2), border: 'none'}}
-
-
                                             />
                                         </div>
-
                                     </div>
-                                    <p>Aylıq ödəniş</p>
+
+                                    <p>{translate('product_apply_monthly_payment')}</p>
                                     <h1>{monthlyPayment.toFixed(2)} ₼</h1>
 
-                                    <div>
-                                        <div className={'mt-50 row'}>
-                                            <div className={'col-lg-6 col-sm-6 col-md-12'}>
-                                                <h6>FIN code </h6>
-                                                <div className={classes.stringInput}>
-                                                    <Input
-                                                        type='text'
-                                                        bordered={false}
-                                                        placeholder='ABCDEFG'
-                                                    />
-                                                </div>
+                                    <div className={'mt-50 row'}>
+                                        <div className={'col-lg-6 col-sm-6 col-md-12'}>
+                                            <h6>{translate('product_apply_fin_code')}</h6>
+                                            <div className={classes.stringInput}>
+                                                <Input
+                                                    type='text'
+                                                    bordered={false}
+                                                    placeholder={translate('product_apply_fin_code_placeholder')}
+                                                />
                                             </div>
-                                            <div className={'col-lg-6 col-md-6 col-sm-12 '}>
-                                                <h6>Əlaqə nömrəsi </h6>
-                                                <div className={classes.stringInput}>
-                                                    <h5>+994</h5>
-                                                    <Input
-                                                        type='text'
-                                                        bordered={false}
-                                                        placeholder='00 000 00 00'
-                                                    />
-                                                </div>
-                                            </div>
-
                                         </div>
-
+                                        <div className={'col-lg-6 col-md-6 col-sm-12'}>
+                                            <h6>{translate('product_apply_contact_number')}</h6>
+                                            <div className={classes.stringInput}>
+                                                <h5>+994</h5>
+                                                <Input
+                                                    type='text'
+                                                    bordered={false}
+                                                    placeholder={translate('product_apply_contact_number_placeholder')}
+                                                />
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div className={classes.checkboxAndButton}>
                                         <div className={'row'}>
-                                            <div className={'col-lg-6 col-md-6 col-sm-12 '}>
+                                            <div className={'col-lg-6 col-md-6 col-sm-12'}>
                                                 <Checkbox>
-                                                    <p><a href='#'>AKB RAZILIQ  </a> vəriləsi <br/> üçün icazə </p>
+                                                    <p>{translate('product_apply_checkbox')}</p>
                                                 </Checkbox>
                                             </div>
-                                            <div className={'col-lg-6 col-md-6 col-sm-12 '}>
+                                            <div className={'col-lg-6 col-md-6 col-sm-12'}>
                                                 <div className={classes.applyBtn}>
-                                                    <p>Müraciət et</p>
+                                                    <p>{translate('product_apply_button')}</p>
                                                     <ArrowRight/>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
 
@@ -178,7 +167,6 @@ const ProductApplyCreditComponent = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

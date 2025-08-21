@@ -6,24 +6,26 @@ import {DocumentPercentage} from '../../../../assets/images/icons/document-perce
 import {CalendarIcon} from '../../../../assets/images/icons/calendar-icon';
 import {MultipleDocumentPercentage} from '../../../../assets/images/icons/multiple-document-percentage';
 import {CreditCard} from '../../../../assets/images/icons/credit-card';
+import useLocalization from '../../../../assets/lang';
 
 const ProductDetailCreditsComponent = () => {
     const classes = useProductDetailCreditsStyles();
+    const translate = useLocalization();
     const { id } = useParams<{ id: string }>();
     const { data: products = [], isLoading } = useProductsQuery();
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <div>{translate('product_detail_loading')}</div>;
 
     const product = products.find((p:any) => p.id === Number(id));
 
-    if (!product) return <div>Product not found</div>;
-    if (!product.about) return <div>No credit info available</div>;
+    if (!product) return <div>{translate('product_detail_not_found')}</div>;
+    if (!product.about) return <div>{translate('product_detail_no_info')}</div>;
 
     return (
         <div className='container'>
             <div className={classes.titleSection}>
                 <div className={classes.title}>
-                    <p>Kredit Haqqında</p>
+                    <p>{translate('product_detail_title')}</p>
                     <h2>{product.about.title}</h2>
                 </div>
                 <p>{product.about.description}</p>
@@ -33,7 +35,7 @@ const ProductDetailCreditsComponent = () => {
                 <div className={classes.creditItem}>
                     <div className={classes.iconPlaceholder}><Wallet/></div>
                     <div className={classes.creditContent}>
-                        <h3>Kreditin məbləği (AZN)</h3>
+                        <h3>{translate('product_detail_amount')}</h3>
                         <p>{product.features.amount}</p>
                     </div>
                 </div>
@@ -41,7 +43,7 @@ const ProductDetailCreditsComponent = () => {
                 <div className={classes.creditItem}>
                     <div className={classes.iconPlaceholder}><CreditCard/></div>
                     <div className={classes.creditContent}>
-                        <h3>Kreditin ilkin ödənişi (%)</h3>
+                        <h3>{translate('product_detail_initial_payment')}</h3>
                         <p>{product.features.initialPayment}</p>
                     </div>
                 </div>
@@ -49,7 +51,7 @@ const ProductDetailCreditsComponent = () => {
                 <div className={classes.creditItem}>
                     <div className={classes.iconPlaceholder}><DocumentPercentage/></div>
                     <div className={classes.creditContent}>
-                        <h3>Kreditin faiz dərəcəsi (%)</h3>
+                        <h3>{translate('product_detail_percentage')}</h3>
                         <p>{product.features.percentage}</p>
                     </div>
                 </div>
@@ -57,7 +59,7 @@ const ProductDetailCreditsComponent = () => {
                 <div className={classes.creditItem}>
                     <div className={classes.iconPlaceholder}><CalendarIcon/></div>
                     <div className={classes.creditContent}>
-                        <h3>Kreditin müddəti (ay)</h3>
+                        <h3>{translate('product_detail_period')}</h3>
                         <p>{product.features.period}</p>
                     </div>
                 </div>
@@ -65,7 +67,7 @@ const ProductDetailCreditsComponent = () => {
                 <div className={classes.creditItem}>
                     <div className={classes.iconPlaceholder}><MultipleDocumentPercentage/></div>
                     <div className={classes.creditContent}>
-                        <h3>Kreditin razılaşdırılması üçün kommisiya haqqı (%)</h3>
+                        <h3>{translate('product_detail_comission')}</h3>
                         <p>{product.features.comission}</p>
                     </div>
                 </div>
