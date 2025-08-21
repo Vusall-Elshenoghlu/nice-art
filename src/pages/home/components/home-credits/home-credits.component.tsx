@@ -48,7 +48,7 @@ const HomeCreditsComponent = () => {
         );
     }
     return (
-        <div className='mt-50 container'>
+        <div className='mt-50 container mb-150'>
             <div className={classes.wrapper}>
                 <div className={'row'}>
                     <div className={'col-lg-1'}>
