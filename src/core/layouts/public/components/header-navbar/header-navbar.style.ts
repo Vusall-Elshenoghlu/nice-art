@@ -4,7 +4,14 @@ import colors from 'assets/styles/abstracts/color';
 import fonts from 'assets/styles/abstracts/fonts';
 import {breakpoint} from '../../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../../assets/styles/abstracts/sizes';
+interface HeaderProps {
+    isProductDetail: boolean;
+}
 const styles = {
+
+    headerSection: (props: HeaderProps) => ({
+        backgroundColor: props.isProductDetail ? '#fafff3 !important' : '#fff',
+    }),
 
     logoImg: {
         width: '100%',
@@ -148,4 +155,4 @@ const styles = {
 
 };
 
-export const UseHeaderNavbarStyles = createUseStyles(styles);
+export const useHeaderNavbarStyles = createUseStyles(styles);

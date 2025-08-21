@@ -6,6 +6,10 @@ import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
 
 const styles = {
+    root:{
+        backgroundColor:'#fafff3',
+        paddingBottom: rem(100),
+    },
     productIconSection:{
         display: 'flex',
         alignItems: 'center',
