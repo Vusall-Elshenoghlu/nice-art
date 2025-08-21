@@ -129,7 +129,7 @@ const ProductApplyCreditComponent = () => {
                                     <p>Aylıq ödəniş</p>
                                     <h1>{monthlyPayment.toFixed(2)} ₼</h1>
 
-                                    <div className={classes.stringInputsDiv}>
+                                    <div>
                                         <div className={'mt-50 row'}>
                                             <div className={'col-lg-6 col-sm-6 col-md-12'}>
                                                 <h6>FIN code </h6>

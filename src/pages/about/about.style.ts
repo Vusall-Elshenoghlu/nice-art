@@ -190,6 +190,7 @@ const styles = {
     },
     rightSection: {
         flex: 1,
+        marginLeft: rem(60),
 
         [breakpoint(breakpoints.tabletM)]: {
             flex: 'none',
@@ -198,10 +199,16 @@ const styles = {
     goalsSection: {
         display: 'flex',
         alignItems: 'center',
-        gap: rem(25),
-        marginBottom: rem(70),
+        gap: rem(35),
+
+        marginBottom: rem(120),
+
         '&:last-child': {
             marginBottom: 0,
+        },
+
+        '&:nth-child(2)': {
+            marginLeft: rem(80),
         },
 
         [breakpoint(breakpoints.tabletM)]: {
@@ -209,11 +216,13 @@ const styles = {
             alignItems: 'flex-start',
             gap: rem(16),
             marginBottom: rem(40),
+            marginLeft: 0,
             '&:last-child': {
                 marginBottom: 0,
             }
         }
     },
+
     rightTitle: {
         flex: 1,
         '& h2': {
@@ -294,6 +303,7 @@ const styles = {
         flex: 1,
         alignItems: 'flex-start',
         marginTop: rem(120),
+        marginBottom: rem(20),
 
         [breakpoint(breakpoints.tabletM)]: {
             flexDirection: 'column',

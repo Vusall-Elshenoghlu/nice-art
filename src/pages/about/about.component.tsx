@@ -5,39 +5,14 @@ import {Link} from 'react-router-dom';
 import {Routes} from '../../router/routes';
 import mainImg from '/src/assets/images/statics/about-page-image.png';
 import {FingerPrint} from '../../assets/images/icons/finger-print';
-import {rem} from '../../assets/styles/abstracts/functions';
-import {useLeadQuery} from "../../core/shared/leads/actions/leads.queries";
+import {useLeadQuery} from '../../core/shared/leads/actions/leads.queries';
+import {usePurposesQuery} from './actions/purposes/purposes.query';
+import {useStrategiesQuery} from './actions/strategies/strategies.query';
 
 const AboutComponent = () => {
     const classes = useAboutStyles();
-    const goals=[
-        {
-            title:'Adipiscing phasellus orci in dictumst faucibus ullamcorper odio faucibus. Nunc.',
-            text:'Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante ',
-            classname:'ml-0',
-        },
-        {
-            title:'Adipiscing phasellus orci in dictumst faucibus ullamcorper odio faucibus. Nunc.',
-            text:'Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante ',
-            classname:'ml-100',
-        },
-        {
-            title:'Adipiscing phasellus orci in dictumst faucibus ullamcorper odio faucibus. Nunc.',
-            text:'Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante ',
-            classname:'ml-0',
-        },
-    ];
-    const strategies=[
-        {
-            title:'Title',
-            text:'Pulvinar amet ullamcorper nec nullam accumsan, iaculis risus. Feugiat nulla ni imperdiet tellus sit lobortis. Cursus adipiscing aliquam dignissim.',
-        },
-        {
-            title:'Title',
-            text:'Pulvinar amet ullamcorper nec nullam accumsan, iaculis risus. Feugiat nulla ni imperdiet tellus sit lobortis. Cursus adipiscing aliquam dignissim.',
-        }
-    ];
-
+    const {data : purposes =[]}=usePurposesQuery();
+    const {data: strategies=[]}=useStrategiesQuery();
     const {data:products=[], isLoading}=useLeadQuery();
     const filteredProducts=products.filter(products => products.tag==='About');
     if (isLoading) return <div>Loading...</div>;
@@ -77,20 +52,20 @@ const AboutComponent = () => {
 
                 <div className={classes.backgroundSection}>
                     <div className={classes.rightSection}>
-                        {
-                            goals.map(({title, text, classname}, index) => {
+                        {!purposes || purposes.length === 0 ? (
+                                <div>No purposes found</div>
+                            ) :
+                            purposes.map(({title, description, id}) => {
                                 return (
                                     <div
                                         className={classes.goalsSection}
-                                        key={index}
-                                        style={{
-                                            marginLeft: classname === 'ml-100' ? rem(100) : '0',
-                                        }}
+                                        key={id}
+
                                     >
                                         <div><FingerPrint/></div>
                                         <div className={classes.rightTitle}>
                                             <h2>{title}</h2>
-                                            <p>{text}</p>
+                                            <p>{description}</p>
                                         </div>
                                     </div>
                                 );
@@ -107,13 +82,15 @@ const AboutComponent = () => {
                 </div>
 
                 <div className={classes.strategyCards}>
-                    {
-                        strategies.map(({title, text})=>{
+                    {!strategies || strategies.length === 0 ? (
+                            <div>No strategies found</div>
+                        ) :
+                        strategies.map(({title, description})=>{
                             return (
                                 <div key={title} className={classes.strategyCard}>
                                     <div className={classes.strategyFingerPrint}><FingerPrint/></div>
                                     <h3>{title}</h3>
-                                    <p>{text}</p>
+                                    <p>{description}</p>
                                 </div>
                             );
                         })
