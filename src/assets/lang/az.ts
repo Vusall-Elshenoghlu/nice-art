@@ -99,6 +99,22 @@ export const az = {
     about_strategy_subtitle: 'Id duis id turpis mi quisque. Nulla.',
     about_no_strategies: 'Strategiya tapılmadı',
 
+    // Products page
+    products_loading: 'Yüklənir...',
+    products_breadcrumb_title: 'Məhsullar',
+    products_title: 'Məhsullar üçün başlıq \n və ya Lorem Ipsum \n şüar',
+
+    // Products Section
+    products_section_loading: 'Yüklənir...',
+    products_section_error: 'Məhsullar yüklənərkən səhv baş verdi',
+    products_section_no_products: 'Məhsul tapılmadı',
+    products_section_period: 'Müddət (Ay)',
+    products_section_amount: 'Məbləğ (AZN)',
+    products_section_percentage: 'Faiz dərəcəsi (%)',
+    products_section_apply_loan: 'Kredit üçün müraciət et',
+    products_section_image_alt: 'Məhsul şəkli',
+
+
     //Footer
 
     footer_logo_alt: 'Footer logo',
