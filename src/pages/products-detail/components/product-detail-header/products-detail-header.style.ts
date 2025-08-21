@@ -13,7 +13,6 @@ const styles = {
         marginBottom: rem(40),
 
         '& h2': {
-
             fontSize: rem(16),
             fontWeight: 'normal',
         },
@@ -41,12 +40,35 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: rem(20),
+
         '& h2':{
             color:colors.activeLiColor,
             fontFamily:fonts.mainFont,
             fontWeight:800,
             fontSize:rem(60),
-            fontStyle:'extra-bold'
+            fontStyle:'extra-bold',
+            flex: '1 1 auto',
+            minWidth: rem(200),
+        },
+
+        [breakpoint(breakpoints.tabletM)]: {
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+            gap: rem(16),
+
+            '& h2': {
+                fontSize: rem(40),
+                width: '100%',
+            }
+        },
+
+
+        [breakpoint(breakpoints.mobileL)]: {
+            '& h2': {
+                fontSize: rem(32),
+            }
         }
     },
     imageContainer: {
@@ -54,6 +76,21 @@ const styles = {
         width: rem(450),
         height: rem(300),
         flexShrink: 0,
+
+        [breakpoint(breakpoints.tabletM)]: {
+            width: '100%',
+            maxWidth: rem(400),
+            height: rem(260),
+        },
+
+        [breakpoint(breakpoints.mobileL)]: {
+            width: '100%',
+            height: rem(200),
+        },
+
+        [breakpoint(breakpoints.mobileS)]: {
+            height: rem(180),
+        }
     },
     productImage: {
         width: '100%',
@@ -61,6 +98,6 @@ const styles = {
         objectFit: 'contain',
         borderRadius: rem(8),
     },
-}as const;
+} as const;
 
-export  const useProductDetailStyles = createUseStyles(styles);
+export const useProductDetailStyles = createUseStyles(styles);
