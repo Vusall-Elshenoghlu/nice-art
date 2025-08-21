@@ -98,6 +98,7 @@ const styles = {
         lineHeight: 1.6,
         margin: 0,
         fontFamily: fonts.mainFont,
+        whiteSpace: 'pre-line',
 
         [breakpoint(breakpoints.tabletM)]: {
             fontSize: rem(14),
@@ -155,6 +156,7 @@ const styles = {
         top: rem(200),
         width:'100%',
         zIndex: 2,
+        whiteSpace: 'pre-line',
         '& h2': {
             fontFamily: fonts.mainFont,
             fontWeight: 800,

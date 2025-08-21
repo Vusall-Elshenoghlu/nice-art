@@ -2,15 +2,17 @@ import { useHeaderModalStyles } from './header-modal.style';
 import { NavLink } from 'react-router-dom';
 import { Routes } from '../../../../../router/routes';
 import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, YoutubeOutlined } from '@ant-design/icons';
+import useLocalization from '../../../../../assets/lang';
 
 const HeaderModalComponent = ({ setIsOpenMenu }: { setIsOpenMenu: (open: boolean) => void }) => {
     const classes = useHeaderModalStyles();
+    const translate = useLocalization();
 
     const navLinks = [
-        { to: Routes.about, label: 'About' },
-        { to: Routes.products, label: 'Products' },
-        { to: Routes.contact, label: 'Contact' },
-        { to: Routes.partners, label: 'Partners' },
+        { to: Routes.about, label: translate('navbar_about') },
+        { to: Routes.products, label: translate('navbar_products') },
+        { to: Routes.contact, label: translate('navbar_contact') },
+        { to: Routes.partners, label: translate('navbar_partners') },
     ];
 
     const socialLinks = [

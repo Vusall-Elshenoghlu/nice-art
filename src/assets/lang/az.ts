@@ -90,8 +90,8 @@ export const az = {
     about_breadcrumb_title: 'Haqqımızda',
     about_loading: 'Yüklənir...',
     about_purpose: 'Məqsədimiz',
-    about_purpose_subtitle: 'Id duis id turpis mi quisque. Nulla.',
-    about_purpose_description: 'Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. Tellus odio eu ante tincidunt vivamus nunc nibh arcu, augue. Egestas et amet neque placerat aliquam tempo',
+    about_purpose_subtitle: `Id duis id turpis mi \n quisque. Nulla.`,
+    about_purpose_description: `Malesuada tortor fringilla ut faucibus. Urna tellus lectus platea turpis non. \n Tellus odio eu ante tincidunt vivamus nunc nibh arcu, augue. Egestas et \n amet neque placerat aliquam tempo`,
     about_no_purposes: 'Məqsəd tapılmadı',
     about_main_image_alt: 'Haqqımızda şəkil',
 
