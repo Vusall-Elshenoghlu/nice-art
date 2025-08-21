@@ -1,15 +1,36 @@
 import useLocalization from '../../../../assets/lang';
 import {useContactFormStyles} from './contact-form.style';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
-import {Input, Select, Spin} from 'antd';
+import {Form, Input, message, Select, Spin} from 'antd';
 import Button from '../../../../core/shared/button/button.component';
 import {ArrowRight} from '../../../../assets/images/icons/arrows';
+import {useCallback} from 'react';
+import {IHomeCredits} from '../../../home/components/home-credits/home-credits';
+import {HomeCreditsModel} from '../../../home/components/home-credits/model/home-credits.model';
+import {IContactForm} from './contact-form';
+import {ContactFormModel} from './model/contact-form.model';
 
 const ContactFormComponent = () => {
     const translate = useLocalization();
     const classes = useContactFormStyles();
     const {data: leads = [], isLoading} = useLeadQuery();
     const heroLead = leads.find(lead => lead.id === 9);
+    const [form] = Form.useForm();
+    const initialValues = {
+        email: '',
+        phone: '',
+        topic: '',
+        message: '',
+    };
+
+    const onFinish = useCallback((values: IContactForm) => {
+        message.success(translate('home_credits_apply_success'));
+        console.log('Credit values:', new ContactFormModel(values));
+        form.resetFields();
+    }, [form]);
+    const onFinishFailed = useCallback((errorInfo: any) => {
+        message.error(translate('products_detail_form_submission_failed'), errorInfo);
+    }, [form]);
     if (isLoading) {
         return (
             <div className='d-flex justify-content-center align-items-center'>
@@ -27,61 +48,88 @@ const ContactFormComponent = () => {
                     </div>
                     <div className={'col-lg-6 col-md-6 col-sm-12'}>
                         <div className={classes.contact}>
-                            <div className={'row'}>
-                                <div className={'col-lg-6 col-md-6 col-sm-12'}>
+                            <Form
+                                initialValues={initialValues}
+                                name={'Contact'}
+                                onFinish={onFinish}
+                                onFinishFailed={onFinishFailed}
+                            >
+                                <div className={'row'}>
+                                    <div className={'col-lg-6 col-md-6 col-sm-12'}>
+
+                                    </div>
+                                    <div className={'col-lg-6 col-md-6 col-sm-12'}>
+                                        <h6 className={classes.labetInput}>{translate('contact_form_email')} </h6>
+                                        <Form.Item name='email' rules={[{
+                                            required: true,
+                                            message: translate('contact_form_email_required')
+                                        }]}>
+                                            <div className={classes.stringInput}>
+                                                <Input
+                                                    type='text'
+                                                    bordered={false}
+                                                    placeholder={translate('contact_form_email_placeholder')}
+                                                />
+                                            </div>
+                                        </Form.Item>
+                                    </div>
+                                    <div className={'col-lg-6 col-md-6 col-sm-12 mt-30'}>
+                                        <h6 className={classes.labetInput}>{translate('home_credits_contact_number')} </h6>
+                                        <Form.Item name='email' rules={[{
+                                            required: true,
+                                            message: translate('home_credits_number_required')
+                                        }]}>
+                                            <div className={classes.stringInput}>
+                                                <h5 className={classes.prefix}>{translate('home_credits_number_prefix')}</h5>
+                                                <Input
+                                                    type='text'
+                                                    bordered={false}
+                                                    placeholder={translate('home_credits_number_placeholder')}
+                                                />
+                                            </div>
+                                        </Form.Item>
+                                    </div>
+                                    <div className={'col-lg-6 col-md-6 col-sm-12 mt-30'}>
+                                        <h6 className={classes.labetInput}>{translate('contact_form_topic')} </h6>
+                                        <Form.Item name='email' rules={[{
+                                            required: true,
+                                            message: translate('contact_form_topic_required')
+                                        }]}>
+                                            <div className={classes.stringInput}>
+                                                <Select
+                                                    style={{width: '100%'}}
+                                                    bordered={false}
+                                                    placeholder={translate('contact_form_topic_placeholder')}
+
+                                                />
+                                            </div>
+                                        </Form.Item>
+                                    </div>
+                                    <div className={'col-12 mt-30'}>
+                                        <h6 className={classes.labetInput}>{translate('contact_form_message')} </h6>
+                                        <Form.Item name='email' rules={[{
+                                            required: true,
+                                            message: translate('contact_form_message_required')
+                                        }]}>
+                                            <div className={classes.stringInput}>
+                                                <Input
+                                                    type='text'
+                                                    bordered={false}
+                                                    placeholder={translate('contact_form_message_placeholder')}
+                                                />
+                                            </div>
+                                        </Form.Item>
+                                    </div>
+                                    <div className={'col-12 mt-30'}>
+                                        <Button type={'submit'} className={classes.submitBtn}>
+                                            <h5>{translate('contact_form_submit')}</h5>
+                                            <ArrowRight/>
+                                        </Button>
+                                    </div>
+
 
                                 </div>
-                                <div className={'col-lg-6 col-md-6 col-sm-12'}>
-                                    <h6 className={classes.labetInput}>{translate('contact_form_email')} </h6>
-                                    <div className={classes.stringInput}>
-                                        <Input
-                                            type='text'
-                                            bordered={false}
-                                            placeholder={translate('contact_form_email_placeholder')}
-                                        />
-                                    </div>
-                                </div>
-                                <div className={'col-lg-6 col-md-6 col-sm-12 mt-30'}>
-                                    <h6 className={classes.labetInput}>{translate('home_credits_contact_number')} </h6>
-                                    <div className={classes.stringInput}>
-                                        <h5 className={classes.prefix}>{translate('home_credits_number_prefix')}</h5>
-                                        <Input
-                                            type='text'
-                                            bordered={false}
-                                            placeholder={translate('home_credits_number_placeholder')}
-                                        />
-                                    </div>
-                                </div>
-                                <div className={'col-lg-6 col-md-6 col-sm-12 mt-30'}>
-                                    <h6 className={classes.labetInput}>{translate('contact_form_topic')} </h6>
-                                    <div className={classes.stringInput}>
-                                        <Select
-                                            style={{width: '100%'}}
-                                            bordered={false}
-                                            placeholder={translate('contact_form_topic_placeholder')}
-
-                                        />
-                                    </div>
-                                </div>
-                                <div className={'col-12 mt-30'}>
-                                    <h6 className={classes.labetInput}>{translate('contact_form_message')} </h6>
-                                    <div className={classes.stringInput}>
-                                        <Input
-                                            type='text'
-                                            bordered={false}
-                                            placeholder={translate('contact_form_message_placeholder')}
-                                        />
-                                    </div>
-                                </div>
-                                <div className={'col-12 mt-30'}>
-                                    <Button className={classes.submitBtn}>
-                                        <h5>{translate('contact_form_submit')}</h5>
-                                        <ArrowRight/>
-                                    </Button>
-                                </div>
-
-
-                            </div>
+                            </Form>
                         </div>
                     </div>
                 </div>

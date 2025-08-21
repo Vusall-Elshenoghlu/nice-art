@@ -52,13 +52,16 @@ export const az = {
     home_credits_monthly_payment: 'Aylıq ödəniş',
     home_credits_fin_code: 'FIN code',
     home_credits_fin_code_placeholder: 'ABCDEFG',
+    home_credits_fin_code_required: 'FIN kod tələb olunur',
     home_credits_contact_number: 'Əlaqə nömrəsi',
     home_credits_number_prefix: '+994',
     home_credits_number_placeholder: '00 000 00 00',
+    home_credits_number_required: 'Nomre teleb olunur',
     home_credits_AKB: 'AKB RAZILIQ',
     home_credits_AKB_second_part: 'vəriləsi',
     home_credits_AKB_third_part: 'üçün icazə',
     home_credits_apply: 'Müraciət et',
+    home_credits_apply_success: 'Müraciətiniz qeydiyyata alındı ✅. Ən qısa zamanda sizinlə əlaqə saxlanılacaq.',
 
     //Contact
 
@@ -72,10 +75,13 @@ export const az = {
     contact_discover_call: 'Call Us',
     contact_form_email: 'E-poçt',
     contact_form_email_placeholder: 'javidan.nasib@gmail.com',
+    contact_form_email_required: 'Email teleb olunur',
     contact_form_topic: 'Mövzu',
     contact_form_topic_placeholder: 'Mövzu seçib',
+    contact_form_topic_required: 'Mövzu teleb olunur',
     contact_form_message: 'Mesajınız',
     contact_form_message_placeholder: 'Mesajınızı daxil edin.',
+    contact_form_message_required: 'Mesajınız teleb olunur.',
     contact_form_submit: 'Submit',
 
 

@@ -26,11 +26,11 @@ const PartnersCompaniesComponent = () => {
         );
     }
     return (
-        <div className={'container mt-80 mb-80'}>
+        <div className={'container mt-80 mb-150'}>
             <div className={'row'}>
                 {
                     partners.map((partner: IPartnersCompany, index: any) => (
-                        <div key={index} className={'col-lg-3 col-md-4 col-sm-6 col-6 mt-20'}>
+                        <div key={index} className={'col-lg-3 col-md-4 col-sm-6 col-6 mt-30'}>
                             <div
                                 className={classes.partnerDiv}
                                 onClick={() => handleOpenModal(partner)}

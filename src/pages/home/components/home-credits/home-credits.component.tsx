@@ -8,6 +8,7 @@ import colors from '../../../../assets/styles/abstracts/color';
 import {rem} from '../../../../assets/styles/abstracts/functions';
 import {ArrowRight} from '../../../../assets/images/icons/arrows';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
+import Button from '../../../../core/shared/button/button.component';
 
 const HomeCreditsComponent = () => {
     const translate = useLocalization();
@@ -31,11 +32,12 @@ const HomeCreditsComponent = () => {
         contactNumber: ''
     };
     const onFinish = useCallback((values: IHomeCredits) => {
+        message.success(translate('home_credits_apply_success'));
         console.log('Credit values:', new HomeCreditsModel(values));
         form.resetFields();
     }, [form]);
     const onFinishFailed = useCallback((errorInfo: any) => {
-        message.error('Form submission failed:', errorInfo);
+        message.error(translate('products_detail_form_submission_failed'), errorInfo);
     }, [form]);
 
     const {data: leads = [], isLoading} = useLeadQuery();
@@ -141,16 +143,25 @@ const HomeCreditsComponent = () => {
                                         <div className={'mt-50 row'}>
                                             <div className={'col-lg-6 col-sm-6 col-md-12'}>
                                                 <h6>{translate('home_credits_fin_code')}</h6>
-                                                <div className={classes.stringInput}>
-                                                    <Input
-                                                        type='text'
-                                                        bordered={false}
-                                                        placeholder={translate('home_credits_fin_code_placeholder')}
-                                                    />
-                                                </div>
+                                                <Form.Item name="finCode" rules={[{
+                                                    required: true,
+                                                    message: translate('home_credits_fin_code_required')
+                                                }]}>
+                                                    <div className={classes.stringInput}>
+                                                        <Input
+                                                            type="text"
+                                                            bordered={false}
+                                                            placeholder={translate('home_credits_fin_code_placeholder')}
+                                                        />
+                                                    </div>
+                                                </Form.Item>
                                             </div>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                                                 <h6>{translate('home_credits_contact_number')} </h6>
+                                                <Form.Item name="number" rules={[{
+                                                    required: true,
+                                                    message: translate('home_credits_number_required')
+                                                }]}>
                                                 <div className={classes.stringInput}>
                                                     <h5 className={classes.prefix}>{translate('home_credits_number_prefix')}</h5>
                                                     <Input
@@ -159,6 +170,7 @@ const HomeCreditsComponent = () => {
                                                         placeholder={translate('home_credits_number_placeholder')}
                                                     />
                                                 </div>
+                                                </Form.Item>
                                             </div>
 
                                         </div>
@@ -169,14 +181,16 @@ const HomeCreditsComponent = () => {
                                         <div className={'row'}>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                                                 <Checkbox>
-                                                    <p><a href='#'>{translate('home_credits_AKB')} </a> {translate('home_credits_AKB_second_part')} <br/> {translate('home_credits_AKB_third_part')} </p>
+                                                    <p><a
+                                                        href='#'>{translate('home_credits_AKB')} </a> {translate('home_credits_AKB_second_part')}
+                                                        <br/> {translate('home_credits_AKB_third_part')} </p>
                                                 </Checkbox>
                                             </div>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
-                                                <div className={classes.applyBtn}>
+                                                <Button type={'submit'} className={classes.applyBtn}>
                                                     <p>{translate('home_credits_apply')}</p>
                                                     <ArrowRight/>
-                                                </div>
+                                                </Button>
                                             </div>
                                         </div>
                                     </div>
