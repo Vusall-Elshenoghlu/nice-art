@@ -16,10 +16,11 @@ const HeaderNavbarComponent = () => {
     const translate = useLocalization();
 
     const navLinks = [
+        { to: Routes.home, label: translate('navbar_home') },
         { to: Routes.about, label: translate('navbar_about') },
         { to: Routes.products, label: translate('navbar_products') },
-        { to: Routes.contact, label: translate('navbar_contact') },
         { to: Routes.partners, label: translate('navbar_partners') },
+        { to: Routes.contact, label: translate('navbar_contact') },
     ];
 
     return (

@@ -41,7 +41,7 @@ const ProductApplyCreditComponent = () => {
     }, [form, translate]);
 
     return (
-        <div className='mt-50 container'>
+        <div className='mt-50 container mb-100'>
             <div className={classes.wrapper}>
                 <div className={'row'}>
                     <div className={'col-lg-1'}>

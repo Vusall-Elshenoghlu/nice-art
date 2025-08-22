@@ -23,10 +23,11 @@ export const az = {
     remove_task: 'Taski sil',
 
     //Navbar
-    navbar_about: 'about',
-    navbar_contact: 'contact',
-    navbar_partners: 'partners',
-    navbar_products: 'products',
+    navbar_home: 'Ana Səhifə',
+    navbar_about: 'Haqqımızda',
+    navbar_contact: 'Əlaqə',
+    navbar_partners: 'Partnyorlar',
+    navbar_products: 'Məhsullar',
 
     //Home
     home_hero_productsBtn: 'Products',
