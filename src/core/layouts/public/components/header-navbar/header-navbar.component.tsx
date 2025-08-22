@@ -24,7 +24,7 @@ const HeaderNavbarComponent = () => {
     ];
 
     return (
-        <div className={classes.headerSection}>
+        <header className={classes.headerSection}>
             <div className="container">
                 <div className="row">
                     <div className="col-6 col-md-3 col-lg-2 py-35">
@@ -70,7 +70,7 @@ const HeaderNavbarComponent = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
