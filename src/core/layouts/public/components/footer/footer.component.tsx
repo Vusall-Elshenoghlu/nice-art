@@ -35,55 +35,57 @@ const FooterComponent = () => {
 
     return (
         <footer className={`${classes.footerSection}`}>
-            <div className='container mt-120'>
-                <div className={'row'}>
-                    <div className={'col-lg-6 col-md-6 col-sm-12'}>
-                        <img src={logoImg} alt={translate('footer_logo_alt')}/>
-                        <p className={classes.footerSubtitle}>{translate('footer_subtitle')}</p>
-                        <div className={classes.socialMediaIcons}>
-                            <FacebookIcon/>
-                            <TwitterIcon/>
-                            <InstagramIcon/>
-                            <LinkedinIcon/>
-                            <YoutubeIcon/>
-                        </div>
-                    </div>
-
-                    <div className={'col-lg-6 col-md-6 col-sm-12'}>
-                        <div className={'row'}>
-                            <div className={'col-6'}>
-                                <div className={classes.leftDiv}>
-                                    <h5 className={classes.headingLinks}>{translate('footer_site')}</h5>
-                                    {siteLinks.map(({ label, to }, index) => (
-                                        <Link
-                                            key={to}
-                                            to={to}
-                                        >
-                                            <p className={`${classes.footerParagraph} ${index === 0 ? 'mt-50' : ''}`}>
-                                                {label}
-                                            </p>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className={'col-6'}>
-                                <div className={classes.rightDiv}>
-                                    <h5 className={classes.headingLinks}>{translate('footer_contact')}</h5>
-                                    {contactInfo.map(({ icon, text }, index) => (
-                                        <div
-                                            key={text}
-                                            className={`${classes.footerContactDiv} ${index === 0 ? 'mt-50' : ''}`}
-                                        >
-                                            {icon}
-                                            <p>{text}</p>
-                                        </div>
-                                    ))}
-                                </div>
+            <div className='container mt-20'>
+                <div className={classes.firstSection}>
+                    <div className={'row'}>
+                        <div className={'col-lg-6 col-md-6 col-sm-12'}>
+                            <img src={logoImg} alt={translate('footer_logo_alt')}/>
+                            <p className={classes.footerSubtitle}>{translate('footer_subtitle')}</p>
+                            <div className={classes.socialMediaIcons}>
+                                <FacebookIcon/>
+                                <TwitterIcon/>
+                                <InstagramIcon/>
+                                <LinkedinIcon/>
+                                <YoutubeIcon/>
                             </div>
                         </div>
-                    </div>
 
+                        <div className={'col-lg-6 col-md-6 col-sm-12'}>
+                            <div className={'row'}>
+                                <div className={'col-6'}>
+                                    <div className={classes.leftDiv}>
+                                        <h5 className={classes.headingLinks}>{translate('footer_site')}</h5>
+                                        {siteLinks.map(({ label, to }, index) => (
+                                            <Link
+                                                key={to}
+                                                to={to}
+                                            >
+                                                <p className={`${classes.footerParagraph} ${index === 0 ? 'mt-50' : ''}`}>
+                                                    {label}
+                                                </p>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className={'col-6'}>
+                                    <div className={classes.rightDiv}>
+                                        <h5 className={classes.headingLinks}>{translate('footer_contact')}</h5>
+                                        {contactInfo.map(({ icon, text }, index) => (
+                                            <div
+                                                key={text}
+                                                className={`${classes.footerContactDiv} ${index === 0 ? 'mt-50' : ''}`}
+                                            >
+                                                {icon}
+                                                <p>{text}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <div className={classes.footerBottom}>

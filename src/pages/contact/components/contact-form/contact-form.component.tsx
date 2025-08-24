@@ -73,7 +73,7 @@ const ContactFormComponent = () => {
                                             </div>
                                         </Form.Item>
                                     </div>
-                                    <div className={'col-lg-6 col-md-6 col-sm-12 mt-30'}>
+                                    <div className={'col-lg-6 col-md-6 col-sm-12 mt-3'}>
                                         <h6 className={classes.labetInput}>{translate('home_credits_contact_number')} </h6>
                                         <Form.Item name='email' rules={[{
                                             required: true,
@@ -89,7 +89,7 @@ const ContactFormComponent = () => {
                                             </div>
                                         </Form.Item>
                                     </div>
-                                    <div className={'col-lg-6 col-md-6 col-sm-12 mt-30'}>
+                                    <div className={'col-lg-6 col-md-6 col-sm-12 mt-3'}>
                                         <h6 className={classes.labetInput}>{translate('contact_form_topic')} </h6>
                                         <Form.Item name='email' rules={[{
                                             required: true,
@@ -105,7 +105,7 @@ const ContactFormComponent = () => {
                                             </div>
                                         </Form.Item>
                                     </div>
-                                    <div className={'col-12 mt-30'}>
+                                    <div className={'col-12 mt-3'}>
                                         <h6 className={classes.labetInput}>{translate('contact_form_message')} </h6>
                                         <Form.Item name='email' rules={[{
                                             required: true,

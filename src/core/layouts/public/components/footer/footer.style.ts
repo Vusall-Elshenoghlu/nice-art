@@ -14,6 +14,13 @@ const styles = {
         height: 'auto',
         paddingBottom: rem(30),
     },
+    firstSection: {
+        marginTop: rem(100),
+        [breakpoint(breakpoints.tabletM)]: {
+            marginTop: rem(5),
+        }
+
+    },
     footerSubtitle: {
         marginTop: rem(30),
         fontSize: rem(16),
@@ -57,7 +64,7 @@ const styles = {
             horizontalAlign: 'center',
             color: colors.liColor,
             cursor: 'pointer',
-        }
+        },
     },
     leftDiv: {
         width: 'auto',

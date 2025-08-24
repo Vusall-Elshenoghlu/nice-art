@@ -9,12 +9,10 @@ const styles = {
     wrapper: {
         marginTop: rem(200),
         width: '100%',
-        minHeight: rem(1067),
-        height: 'auto',
+        height: rem(1067),
         backgroundColor: colors.activeLiColorWithOpacith,
         position: 'relative',
         [breakpoint(breakpoints.tabletM)]: {
-            height: rem(800),
             marginTop: rem(120),
         },
         [breakpoint(breakpoints.mobileL)]: {
@@ -53,6 +51,8 @@ const styles = {
     imgAndPlay: {
         position: 'relative',
         width: '100%',
+        height: '100%',
+        overflow: 'hidden',
         '& img': {
             width: '100%',
             height: 'auto',
@@ -60,8 +60,8 @@ const styles = {
     },
     playContainer: {
         position: 'absolute',
-        bottom: rem(100),
-        left: rem(70),
+        bottom: rem(20),
+        left: rem(20),
         width: rem(84),
         height: rem(84),
         borderRadius: '50%',
@@ -71,16 +71,10 @@ const styles = {
         alignItems: 'center',
 
         [breakpoint(breakpoints.tabletM)]: {
-            bottom: rem(50),
-            left: rem(40),
-            width: rem(64),
-            height: rem(64),
+            display: 'none'
         },
         [breakpoint(breakpoints.mobileL)]: {
-            bottom: rem(20),
-            left: rem(20),
-            width: rem(48),
-            height: rem(48),
+            display: 'none'
         },
     },
     playSecondDiv: {
@@ -127,6 +121,7 @@ const styles = {
         [breakpoint(breakpoints.tabletM)]: {
             fontSize: rem(14),
             lineHeight: rem(20),
+            padding: rem(15)
         },
         [breakpoint(breakpoints.mobileL)]: {
             fontSize: rem(13),
@@ -223,7 +218,6 @@ const styles = {
         [breakpoint(breakpoints.tabletM)]: {
             width: '100%',
             height: 'auto',
-            marginTop: rem(40),
         },
         [breakpoint(breakpoints.mobileL)]: {
             width: '100%',

@@ -71,8 +71,8 @@ const HomeCreditsComponent = () => {
                                     onFinishFailed={onFinishFailed}
 
                                 >
-                                    <div className={'row'}>
-                                        <div className={'col-lg-4 col-md-4 col-sm-12'}>
+                                    <div className={classes.row}>
+                                        <div>
                                             <h6 className={classes.amountText}>{translate('home_credits_amount_credit')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{amount}</h2>
@@ -93,7 +93,7 @@ const HomeCreditsComponent = () => {
 
                                             />
                                         </div>
-                                        <div className={'col-lg-4 col-md-4 col-sm-12'}>
+                                        <div >
                                             <h6 className={classes.amountText}>{translate('home_credits_time_credit')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{month}</h2>
@@ -114,7 +114,7 @@ const HomeCreditsComponent = () => {
 
                                             />
                                         </div>
-                                        <div className={'col-lg-4 col-md-4 col-sm-12'}>
+                                        <div>
                                             <h6 className={classes.amountText}>{translate('home_credits_percent_degree')}</h6>
                                             <div className={classes.input}>
                                                 <h2>{rate}</h2>
@@ -130,7 +130,7 @@ const HomeCreditsComponent = () => {
                                                 tooltip={{open: false}}
                                                 trackStyle={{backgroundColor: colors.activeLiColor, height: rem(2)}}
                                                 railStyle={{height: rem(2)}}
-                                                handleStyle={{width: rem(2), height: rem(2), border: 'none'}}
+                                                handleStyle={{}}
 
 
                                             />
@@ -177,7 +177,7 @@ const HomeCreditsComponent = () => {
 
                                     </div>
 
-                                    <div className={classes.checkboxAndButton}>
+                                    <div>
                                         <div className={'row'}>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
                                                 <Checkbox>

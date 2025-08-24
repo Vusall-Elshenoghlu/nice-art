@@ -65,7 +65,7 @@ const HomeAboutUsComponent = () => {
                                     <h5>{heroLead?.tag}</h5>
                                     <h1>{heroLead?.heading}</h1>
                                     <p className={'mt-10'}>{heroLead?.description}</p>
-                                    <h4 className={'mt-50'}>{translate('home_about_learn_more')}</h4>
+                                    <h4 className={'mt-20'}>{translate('home_about_learn_more')}</h4>
                                     <div className={classes.lineDiv}></div>
                                 </div>
                             </div>

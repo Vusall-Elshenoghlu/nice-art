@@ -8,6 +8,7 @@ const styles = {
     wrapper: {
         width: '100%',
         marginTop: rem(300),
+
         '& h6': {
             fontSize: rem(16),
             fontWeight: '800',
@@ -16,7 +17,7 @@ const styles = {
             color: colors.activeLiColor,
         },
         '& h1': {
-            fontSize: rem(53),
+            fontSize: rem(44),
             fontWeight: '800',
             lineHeight: '100%',
             color: colors.liColor,

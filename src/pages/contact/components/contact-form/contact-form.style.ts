@@ -20,7 +20,6 @@ const styles = {
     },
     contact: {
         padding:  rem(15),
-        marginTop: rem(15),
     },
     description: {
         marginTop:  rem(20),
@@ -34,7 +33,7 @@ const styles = {
         fontWeight: '400',
         lineHeight: '100%',
         letterSpacing: '0%',
-        color: colors.amountColor
+        color: colors.amountColor,
     },
     stringInput: {
         marginTop: rem(6),
@@ -81,7 +80,7 @@ const styles = {
         width: '100%',
         height: rem(440),
         border: 'none',
-    }
+    },
 };
 
 export const useContactFormStyles = createUseStyles(styles);

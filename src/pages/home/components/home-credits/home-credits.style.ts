@@ -115,15 +115,16 @@ const styles = {
         color: colors.amountColor
     },
     input: {
-        width: rem(226),
+        width: rem(215),
         height: rem(51),
         backgroundColor: colors.mainBGColor,
-        border: '1px solid #F1F1F1',
-        padding: rem(20),
+        border: '1px solid #E5E5E5',
+        padding: `0 ${rem(20)}`,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
         marginTop: rem(10),
+        marginBottom: rem(20),
 
         '& h2': {
             fontSize: rem(16),
@@ -139,8 +140,9 @@ const styles = {
     },
 
     stringInput: {
-        marginTop: rem(6),
-        width: rem(315),
+        marginTop: rem(10),
+        marginBottom: rem(20),
+        width: '100%',
         height: rem(51),
         borderRadius: rem(4),
         backgroundColor: colors.mainBGColor,
@@ -157,31 +159,55 @@ const styles = {
         railBg: 'red',
         '& .ant-slider-rail': {
             backgroundColor: 'F1F1F1',
-            height: 2,
-            marginTop: rem(-15),
+            height: rem(1),
+            marginTop: rem(-25),
+            marginLeft: rem(-8),
         },
         '& .ant-slider-track': {
+            height:rem(2),
             backgroundColor: colors.activeLiColor,
-            height: 2,
-            marginTop: rem(-15),
+            marginTop: rem(-25),
+            marginLeft: rem(-8),
             '&:hover': {
                 backgroundColor: colors.activeLiColor,
             },
         },
         '& .ant-slider-handle': {
+            marginTop: rem(-23),
+            boxShadow: 'none !important',
+            transform: 'scale(1) !important',
+            transition: 'none !important',
 
-            marginTop: rem(-15),
-            border: 'none',
-            dotBorderColor: colors.activeLiColor,
-            dotActiveBorderColor: colors.activeLiColor,
-            '&:hover': {
-                boxShadow: 'none',
 
+            '&:hover, &:focus, &:active': {
+                border: 'none !important',
+                boxShadow: 'none !important',
+                transform: 'scale(1) !important',
+                backgroundColor: 'transparent !important',
             },
-            '&:focus': {
-                boxShadow: 'none',
+
+            '&::before': {
+                display: 'none !important',
+            },
+
+            '&::after': {
+                height: rem(9),
+                width: rem(9),
+                border: '3px solid #3E6F00 !important',
+                boxShadow: '0 0 0 1px #DFE4D9',
+                transform: 'scale(1) !important',
+                marginLeft: rem(-8),
             },
         },
+
+        '& .ant-slider-handle-dragging': {
+            transform: 'scale(1) !important',
+            boxShadow: 'none !important',
+
+            '&::after': {
+                transform: 'scale(1) !important',
+            }
+        }
 
     },
     checkboxAndButton: {
@@ -189,10 +215,11 @@ const styles = {
     },
 
     applyBtn: {
-        width: rem(320),
+        width: '100%',
         height: rem(48),
         borderRadius: rem(8),
         padding: `${rem(12)} ${rem(24)}`,
+        border: 'none',
         backgroundColor: colors.activeLiColor,
         display: 'flex',
         justifyContent: 'center',
@@ -219,6 +246,14 @@ const styles = {
         color: colors.amountColor,
         opacity: '60%'
     },
+    row: {
+        display: 'flex',
+        width: '100%',
+        [breakpoint(breakpoints.tabletM)]:{
+            display: 'flex',
+            flexDirection: 'column',
+        }
+    }
 }as const;
 
 export const useHomeCreditsStyles = createUseStyles(styles);
