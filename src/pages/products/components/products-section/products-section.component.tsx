@@ -2,7 +2,7 @@ import {useProductsSectionStyles} from './products-section.style';
 import {useProductsQuery} from './actions/products-section.queries';
 import {Link} from 'react-router-dom';
 import useLocalization from '../../../../assets/lang';
-import {Spin} from "antd";
+import {Spin} from 'antd';
 
 
 const ProductsSectionComponent = () => {
