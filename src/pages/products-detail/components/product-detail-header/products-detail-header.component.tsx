@@ -1,6 +1,6 @@
 import { useProductDetailStyles } from './products-detail-header.style';
 import {Link, useParams} from 'react-router-dom';
-import { useProductsQuery } from '../../../products/components/products-section/actions/products-section.queries';
+import { useProductsQuery } from '../../../products/actions/products-section.queries';
 import {Routes} from '../../../../router/routes';
 import {HomeIcon} from '../../../../assets/images/icons/home-icon';
 import {ArrowSmallRight} from '../../../../assets/images/icons/arrows';

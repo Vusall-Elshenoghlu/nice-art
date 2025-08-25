@@ -1,4 +1,4 @@
-import {IAboutModel, IFeaturesModel, IFileModel, IProducts} from '../products-section';
+import {IAboutModel, IFeaturesModel, IFileModel, IProducts} from '../components/products-section/products-section';
 
 export class ProductsSectionModel {
     public id!: number;

@@ -69,6 +69,7 @@ const colors = {
     shadowColor: '#e0e6ed',
     btnBorderColor: '#d3d3d3',
     bgColor: '#f9f9f9',
+
 //alert
 
     alertPrimary: '#eaf1ff',
@@ -99,11 +100,6 @@ const colors = {
 //loading
     loadingBackdropBgColor: 'rgba(0,0,0,0.3)',
 
-
-//table
-    tableHeader: 'rgba(234, 241, 255, 0.74)',
-    tableBorder: '#f0f0f0',
-    btnGrey: '#c4c4c4',
 
 //card
     cardShadow: 'rgba(94, 92, 154, 0.06)',

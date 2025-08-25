@@ -1,6 +1,6 @@
 import {useProductDetailCreditsStyles} from './product-detal-credits.style';
 import {useParams} from 'react-router-dom';
-import {useProductsQuery} from '../../../products/components/products-section/actions/products-section.queries';
+import {useProductsQuery} from '../../../products/actions/products-section.queries';
 import {Wallet} from '../../../../assets/images/icons/wallet';
 import {DocumentPercentage} from '../../../../assets/images/icons/document-percentage';
 import {CalendarIcon} from '../../../../assets/images/icons/calendar-icon';
