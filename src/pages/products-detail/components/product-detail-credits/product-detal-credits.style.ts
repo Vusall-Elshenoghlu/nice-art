@@ -106,8 +106,7 @@ const styles = {
         gap: rem(16),
         padding: rem(20),
         borderRadius: rem(12),
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
-        border: '1px solid #f0f0f0',
+        borderBottom: `1px solid ${colors.borderBottom}`,
 
         [breakpoint(breakpoints.mobileL)]: {
             padding: rem(16),

@@ -1,7 +1,8 @@
 import {useProductsSectionStyles} from './products-section.style';
-import {useProductsQuery} from './actions/products-section.queries';
+import {useProductsQuery} from '../../actions/products-section.queries';
 import {Link} from 'react-router-dom';
 import useLocalization from '../../../../assets/lang';
+import {Spin} from 'antd';
 
 
 const ProductsSectionComponent = () => {
@@ -9,7 +10,13 @@ const ProductsSectionComponent = () => {
     const translate = useLocalization();
     const { data: products = [], isLoading, error } = useProductsQuery();
 
-    if (isLoading) return <div>{translate('products_section_loading')}</div>;
+    if (isLoading) {
+        return (
+            <div className='d-flex justify-content-center align-items-center'>
+                <Spin size='large' />
+            </div>
+        );
+    }
     if (error) return <div>{translate('products_section_error')}</div>;
 
     return (

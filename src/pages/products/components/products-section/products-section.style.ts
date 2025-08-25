@@ -10,7 +10,7 @@ const styles = {
         flexDirection: 'column',
         gap: rem(24),
         padding: `${rem(40)} 0`,
-
+        marginTop: rem(60),
         [breakpoint(breakpoints.tabletM)]: {
             padding: `${rem(20)} ${rem(16)}`,
             gap: rem(16),
@@ -19,13 +19,12 @@ const styles = {
 
     productCard: {
         background: colors.secondBg,
-        borderRadius: rem(16),
         padding: rem(24),
         position: 'relative',
         overflow: 'hidden',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
         border: '1px solid rgba(255, 255, 255, 0.2)',
         display: 'flex',
+        marginBottom: rem(15),
 
         [breakpoint(breakpoints.tabletM)]: {
             flexDirection: 'column',
@@ -164,10 +163,11 @@ const styles = {
             position: 'absolute',
             bottom: rem(16),
             right: rem(16),
-            width: rem(120),
-            height: rem(100),
+            width: rem(170),
+            height: rem(150),
             zIndex: 10,
         },
+
 
         [breakpoint(breakpoints.mobileL)]: {
             width: rem(100),
@@ -191,6 +191,7 @@ const styles = {
         height: '100%',
         objectFit: 'contain',
         borderRadius: rem(8),
+        marginLeft: rem(70),
 
         [breakpoint(breakpoints.tabletM)]: {
             borderRadius: rem(4),

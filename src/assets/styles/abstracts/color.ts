@@ -2,9 +2,11 @@ const colors = {
     mainBGColor: 'white',
     liColor: '#414D44',
     activeLiColor: '#3E6F00',
-    activeLiColorWithOpacith: 'rgba(62, 111, 0, 0.02)',
-    footerColorWithOpacith: 'rgba(62, 111, 0, 0.04)',
-    partnerColorWithOpacith: 'rgba(62, 111, 0, 0.04)',
+    borderBottom:'#ecf1e6',
+    descriptionColor:'#707872',
+    activeLiColorWithOpacity: 'rgba(62, 111, 0, 0.02)',
+    footerColorWithOpacity: 'rgba(62, 111, 0, 0.04)',
+    partnerColorWithOpacity: 'rgba(62, 111, 0, 0.04)',
     amountColor: '#404D43',
     footer_copy_right_color: '#6F6C90',
     headerNavBg: '#0E1726',
@@ -67,6 +69,7 @@ const colors = {
     shadowColor: '#e0e6ed',
     btnBorderColor: '#d3d3d3',
     bgColor: '#f9f9f9',
+
 //alert
 
     alertPrimary: '#eaf1ff',
@@ -97,11 +100,6 @@ const colors = {
 //loading
     loadingBackdropBgColor: 'rgba(0,0,0,0.3)',
 
-
-//table
-    tableHeader: 'rgba(234, 241, 255, 0.74)',
-    tableBorder: '#f0f0f0',
-    btnGrey: '#c4c4c4',
 
 //card
     cardShadow: 'rgba(94, 92, 154, 0.06)',
