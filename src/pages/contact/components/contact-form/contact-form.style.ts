@@ -3,13 +3,18 @@ import colors from '../../../../assets/styles/abstracts/color';
 import {rem} from '../../../../assets/styles/abstracts/functions';
 import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
+
 const styles = {
     wrapper: {
         marginTop: rem(150),
+        paddingTop: rem(100),
         width: '100%',
         minHeight: '60vh',
         height: 'auto',
-        backgroundColor: colors.footerColorWithOpacith
+        backgroundColor: colors.footerColorWithOpacith,
+        [breakpoint(breakpoints.tabletM)]: {
+            paddingTop: rem(10),
+        }
     },
     titleH: {
         fontWeight: '800',
@@ -19,10 +24,10 @@ const styles = {
         color: colors.activeLiColor,
     },
     contact: {
-        padding:  rem(15),
+        paddingTop: rem(15),
     },
     description: {
-        marginTop:  rem(20),
+        marginTop: rem(20),
         fontWeight: '400',
         fontSize: rem(16),
         lineHeight: rem(22),
@@ -81,6 +86,19 @@ const styles = {
         height: rem(440),
         border: 'none',
     },
+    textInput: {
+        [breakpoint(breakpoints.tabletM)]: {
+            height: rem(107),
+            display: 'block',
+            '& Input': {
+                height: rem(50),
+                '&::placeholder': {
+                    paddingTop: rem(5),
+                }
+
+            }
+        }
+    }
 };
 
 export const useContactFormStyles = createUseStyles(styles);

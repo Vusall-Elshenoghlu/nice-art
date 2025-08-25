@@ -1,7 +1,7 @@
 import axiosInstance from '../../../configs/axios.config';
 import {API} from '../../../configs/api.config';
 import {LeadsModel} from '../model/leads.model';
-import {ILeads} from '../leads';
+import {ILeads} from '../component/leads';
 
 export const getLead =async () => {
     const response =await axiosInstance.get<{record: ILeads[], metadata:any}>(API.leads);

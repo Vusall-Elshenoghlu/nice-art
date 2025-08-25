@@ -5,7 +5,5 @@ import {PartnersCompaniesModel} from '../model/partners-companies.model';
 
 export const getPartners = async (): Promise<any[]> => {
     const response = await axiosInstance.get<{record: IPartnersCompany[]; metadata: any}>(API.partners);
-    console.log(response?.data?.record);
     return response?.data.record.map((item) => new PartnersCompaniesModel(item));
-
 };

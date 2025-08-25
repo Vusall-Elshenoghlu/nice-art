@@ -15,7 +15,6 @@ import {Routes} from '../../../../../router/routes';
 
 const FooterComponent = () => {
     const classes = useFooterStyles();
-    const projectName = environment.applicationName;
     const date = new Date().getFullYear();
     const translate = useLocalization();
 
@@ -98,8 +97,8 @@ const FooterComponent = () => {
                         </div>
                         <div className={'col-lg-6 col-md-6 col-sm-12'}>
                             <p className={classes.copyRight}>
-                                {translate('footer_all_rights')} | <a href='#'>{translate('footer_terms')}</a> | <a
-                                href='#'>{translate('footer_privacy')}</a>
+                                {translate('footer_all_rights')} | <a className={classes.terms} href='#'>{translate('footer_terms')}</a> | <a
+                                className={classes.policy} href='#'>{translate('footer_privacy')}</a>
                             </p>
                         </div>
                     </div>

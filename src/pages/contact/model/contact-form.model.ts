@@ -1,4 +1,4 @@
-import {IContactForm} from '../contact-form';
+import {IContactForm} from '../components/contact-form/contact-form';
 
 export class ContactFormModel {
     public email!: string;

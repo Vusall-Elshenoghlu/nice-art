@@ -1,14 +1,25 @@
+// Button.tsx
 import React from 'react';
-import {IButtonProps} from './button';
+import { IButtonProps } from './button';
+import { useButtonStyles } from './button.style';
+import useLocalization from '../../../assets/lang';
 
-const Button: React.FC<IButtonProps> = ({children, className = '', style, ...props}) =>{
+const Button: React.FC<IButtonProps> = ({children, variant = 'primary', size = 'md', loading = false, disabled, className = '', ...props}) => {
+    const classes = useButtonStyles();
+    const translate = useLocalization();
     return (
         <button
-            className={className}
-            style={style}
+            className={`
+        ${classes.base} 
+        ${classes[variant]} 
+        ${classes[size]} 
+        ${disabled || loading ? classes.disabled : ''} 
+        ${className}
+      `}
+            disabled={disabled || loading}
             {...props}
         >
-            {children}
+            {loading ? translate('products_loading') : children}
         </button>
     );
 };

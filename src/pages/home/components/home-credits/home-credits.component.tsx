@@ -3,7 +3,7 @@ import {useHomeCreditsStyles} from './home-credits.style';
 import {useCallback, useMemo, useState} from 'react';
 import {Checkbox, Form, Input, message, Slider, Spin} from 'antd';
 import {IHomeCredits} from './home-credits';
-import {HomeCreditsModel} from './model/home-credits.model';
+import {HomeCreditsModel} from '../../model/home-credits.model';
 import colors from '../../../../assets/styles/abstracts/color';
 import {rem} from '../../../../assets/styles/abstracts/functions';
 import {ArrowRight} from '../../../../assets/images/icons/arrows';

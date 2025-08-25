@@ -55,7 +55,6 @@ const styles = {
             opacity: '0.1',
             height: rem(900),
             overflow: 'hidden',
-
         },
         "& .ant-modal-content": {
             backgroundColor: '#F7F9F5',
@@ -66,6 +65,17 @@ const styles = {
             flexDirection: 'column',
             position: 'relative',
             overflow: 'hidden',
+            border: 'none !important',
+            boxShadow: 'none !important',
+            outline: 'none !important',
+            layerBlur: rem(154)
+        },
+        "& .ant-modal-wrap": {
+            outline: 'none !important',
+        },
+        "& *": {
+            outline: 'none !important',
+            border: 'none !important',
         }
     },
 

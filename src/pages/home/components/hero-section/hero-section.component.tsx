@@ -35,7 +35,7 @@ const HeroSectionComponent = () => {
                                        </Button>
                                    </Link>
                                     <Link to={Routes.about}>
-                                        <Button className={classes.aboutBtn}>
+                                        <Button variant={'secondary'} className={classes.aboutBtn}>
                                             <p>{translate('home_hero_aboutBtn')}</p>
                                             <ArrowSmallDown/>
                                         </Button>

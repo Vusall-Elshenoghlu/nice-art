@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {Routes} from '../../../../router/routes';
 import {HomeIcon} from '../../../../assets/images/icons/home-icon';
 import {ArrowSmallRight} from '../../../../assets/images/icons/arrows';
-import {useContactDiscoverUsQuery, useContactImagesQuery} from './actions/contact-discover-us.queries';
+import {useContactDiscoverUsQuery, useContactImagesQuery} from '../../actions/contact-discover-us.queries';
 import {IContactImages} from './contact-discover-us';
 import {Spin} from 'antd';
 import useLocalization from '../../../../assets/lang';

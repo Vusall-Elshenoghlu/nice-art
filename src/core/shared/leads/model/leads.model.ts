@@ -1,5 +1,5 @@
 import {IFileModel} from '../../../../pages/products/components/products-section/products-section';
-import {ILeads} from '../leads';
+import {ILeads} from '../component/leads';
 
 
 export class LeadsModel {

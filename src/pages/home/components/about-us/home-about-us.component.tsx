@@ -2,7 +2,7 @@ import {useHomeAboutUsStyles} from './home-about-us.style';
 import useLocalization from '../../../../assets/lang';
 import ImgOne from 'assets/images/statics/home-about-component1.jpg';
 import {PlayIcon} from '../../../../assets/images/icons/play-icon';
-import {useAboutUsVideoQuery} from './actions/about-us.queries';
+import {useAboutUsVideoQuery} from '../../actions/about-us.queries';
 import {useState} from 'react';
 import {Modal, Spin} from 'antd';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';

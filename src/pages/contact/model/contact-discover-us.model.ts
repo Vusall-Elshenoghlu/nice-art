@@ -1,4 +1,4 @@
-import {IContactDiscoverus} from '../contact-discover-us';
+import {IContactDiscoverus} from '../components/contact-discover-us/contact-discover-us';
 
 export class ContactDiscoverUsModel {
     public phone!: string;

@@ -1,4 +1,4 @@
-import {IHomeCredits} from '../home-credits';
+import {IHomeCredits} from '../components/home-credits/home-credits';
 
 export class HomeCreditsModel {
     public amount!: number;

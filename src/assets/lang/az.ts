@@ -1,26 +1,6 @@
 export const az = {
-    rights: 'Bütün hüquqlar qorunur',
-    copyright: 'Copyright',
-    organisation: 'Azintelecom MMC',
 
-    // left menu
-    home_title: 'Ana səhifə',
-    form_title: 'Form',
-    table_title: 'Cədvəl',
 
-    // errors
-    input_required: 'Bu xana mütləqdir',
-    input_min_length: 'Ən azı {min} simvol olmalıdır',
-    email_invalid: 'Email düzgün deyil',
-    //components
-    login_sign_in_button: 'Daxil ol',
-    login_title: 'Daxil ol',
-    login_subtitle: 'Davam etmək üçün hesabınıza daxil olun.',
-    add_task: 'Task elave et',
-    add:"Elave et",
-    complete:"Tamamla",
-    uncomplete:"Tamamlama",
-    remove_task: 'Taski sil',
 
     //Navbar
     navbar_home: 'Ana Səhifə',
@@ -28,6 +8,12 @@ export const az = {
     navbar_contact: 'Əlaqə',
     navbar_partners: 'Partnyorlar',
     navbar_products: 'Məhsullar',
+
+    //Navbar Modal
+    navbar_modal_facebook: 'Facebook',
+    navbar_modal_instagram: 'Instagram',
+    navbar_modal_linkedin: 'Linkedin',
+    navbar_modal_youtube: 'Youtube',
 
     //Home
     home_hero_productsBtn: 'Products',
@@ -175,9 +161,4 @@ export const az = {
     footer_all_rights: 'All Rights Reserved',
     footer_terms: 'Terms and Conditions',
     footer_privacy: 'Privacy Policy',
-
-
-
-
-
 };

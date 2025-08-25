@@ -5,10 +5,8 @@ import {Form, Input, message, Select, Spin} from 'antd';
 import Button from '../../../../core/shared/button/button.component';
 import {ArrowRight} from '../../../../assets/images/icons/arrows';
 import {useCallback} from 'react';
-import {IHomeCredits} from '../../../home/components/home-credits/home-credits';
-import {HomeCreditsModel} from '../../../home/components/home-credits/model/home-credits.model';
 import {IContactForm} from './contact-form';
-import {ContactFormModel} from './model/contact-form.model';
+import {ContactFormModel} from '../../model/contact-form.model';
 
 const ContactFormComponent = () => {
     const translate = useLocalization();
@@ -25,7 +23,6 @@ const ContactFormComponent = () => {
 
     const onFinish = useCallback((values: IContactForm) => {
         message.success(translate('home_credits_apply_success'));
-        console.log('Credit values:', new ContactFormModel(values));
         form.resetFields();
     }, [form]);
     const onFinishFailed = useCallback((errorInfo: any) => {
@@ -40,7 +37,7 @@ const ContactFormComponent = () => {
     }
     return (
         <div className={classes.wrapper}>
-            <div className={'container pt-100'}>
+            <div className={'container'}>
                 <div className={'row'}>
                     <div className={'col-lg-6 col-md-6 col-sm-12'}>
                         <h1 className={classes.titleH}>{heroLead?.title}</h1>
@@ -111,7 +108,7 @@ const ContactFormComponent = () => {
                                             required: true,
                                             message: translate('contact_form_message_required')
                                         }]}>
-                                            <div className={classes.stringInput}>
+                                            <div className={`${classes.stringInput} ${classes.textInput}`}>
                                                 <Input
                                                     type='text'
                                                     bordered={false}
@@ -120,7 +117,7 @@ const ContactFormComponent = () => {
                                             </div>
                                         </Form.Item>
                                     </div>
-                                    <div className={'col-12 mt-30'}>
+                                    <div className={'col-12 mt-3'}>
                                         <Button type={'submit'} className={classes.submitBtn}>
                                             <h5>{translate('contact_form_submit')}</h5>
                                             <ArrowRight/>

@@ -83,7 +83,10 @@ const styles = {
         },
     },
     footerBottom: {
-        marginTop: 'auto',
+        marginTop: rem(100),
+        [breakpoint(breakpoints.tabletM)]: {
+            marginTop: rem(10),
+        }
     },
     copyRight: {
         fontSize: rem(18),
@@ -94,6 +97,16 @@ const styles = {
         '& a': {
             color: colors.activeLiColor,
             textDecoration: 'underline'
+        }
+    },
+    terms: {
+        [breakpoint(breakpoints.tabletM)]: {
+            fontSize: rem(17),
+        }
+    },
+    policy: {
+        [breakpoint(breakpoints.tabletM)]: {
+            marginLeft: rem(218),
         }
     }
 };

@@ -1,4 +1,4 @@
-import {IContactImages} from '../contact-discover-us';
+import {IContactImages} from '../components/contact-discover-us/contact-discover-us';
 
 export class ContactImagesModel {
     public id!: number;

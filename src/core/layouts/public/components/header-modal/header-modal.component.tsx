@@ -16,10 +16,10 @@ const HeaderModalComponent = ({ setIsOpenMenu }: { setIsOpenMenu: (open: boolean
     ];
 
     const socialLinks = [
-        { icon: <FacebookOutlined />, href: '#', label: 'Facebook' },
-        { icon: <InstagramOutlined />, href: '#', label: 'Instagram' },
-        { icon: <LinkedinOutlined />, href: '#', label: 'LinkedIn' },
-        { icon: <YoutubeOutlined />, href: '#', label: 'YouTube' },
+        { icon: <FacebookOutlined />, href: '#', label: translate('navbar_modal_facebook') },
+        { icon: <InstagramOutlined />, href: '#', label: translate('navbar_modal_instagram') },
+        { icon: <LinkedinOutlined />, href: '#', label: translate('navbar_modal_linkedin') },
+        { icon: <YoutubeOutlined />, href: '#', label: translate('navbar_modal_youtube') },
     ];
 
     return (
