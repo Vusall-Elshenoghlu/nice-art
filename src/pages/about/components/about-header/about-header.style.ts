@@ -112,16 +112,16 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: rem(512),
-        marginTop: rem(200),
+        marginTop: rem(150),
         '& img': {
-            padding: `0 ${rem(100)} ${rem(180)}`,
+            padding: `0 ${rem(80)} ${rem(180)}`,
         },
 
         [breakpoint(breakpoints.tabletM)]: {
             height: rem(240),
             marginTop: rem(80),
             '& img': {
-                padding: `0 ${rem(20)} ${rem(40)}`,
+                padding: `0 ${rem(20)} ${rem(100)}`,
                 maxWidth: '100%',
                 height: 'auto',
             }

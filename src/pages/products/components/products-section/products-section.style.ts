@@ -23,7 +23,6 @@ const styles = {
         padding: rem(24),
         position: 'relative',
         overflow: 'hidden',
-        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
         border: '1px solid rgba(255, 255, 255, 0.2)',
         display: 'flex',
 
@@ -191,6 +190,7 @@ const styles = {
         height: '100%',
         objectFit: 'contain',
         borderRadius: rem(8),
+        marginLeft: rem(70),
 
         [breakpoint(breakpoints.tabletM)]: {
             borderRadius: rem(4),

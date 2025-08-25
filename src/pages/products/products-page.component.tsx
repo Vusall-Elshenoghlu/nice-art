@@ -7,13 +7,20 @@ import ProductsSectionComponent from './components/products-section/products-sec
 import {useLeadQuery} from '../../core/shared/leads/actions/leads.queries';
 import {ILeads} from '../../core/shared/leads/leads';
 import useLocalization from '../../assets/lang';
+import {Spin} from "antd";
 
 const ProductsPageComponent = () => {
     const classes = useProductStyles();
     const translate = useLocalization();
     const {data: products = [], isLoading} = useLeadQuery();
 
-    if (isLoading) return <div>{translate('products_loading')}</div>;
+    if (isLoading) {
+        return (
+            <div className='d-flex justify-content-center align-items-center'>
+                <Spin size='large' />
+            </div>
+        );
+    }
 
     const filteredeProducts = products.filter(product => product.tag === 'Products');
 

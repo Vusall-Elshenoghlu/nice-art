@@ -6,6 +6,7 @@ import {ArrowSmallRight} from '../../../../assets/images/icons/arrows';
 import {Routes} from '../../../../router/routes';
 import useLocalization from '../../../../assets/lang';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
+import {Spin} from 'antd';
 
 const AboutHeaderComponent = () => {
     const classes = useAboutHeaderStyles();
@@ -13,7 +14,13 @@ const AboutHeaderComponent = () => {
     const {data:products=[], isLoading} = useLeadQuery();
     const filteredProducts = products.filter(products => products.tag==='About');
 
-    if (isLoading) return <div>{translate('about_loading')}</div>;
+    if (isLoading) {
+        return (
+            <div className='d-flex justify-content-center align-items-center'>
+                <Spin size='large' />
+            </div>
+        );
+    }
 
     return (
         <div className={'container'}>

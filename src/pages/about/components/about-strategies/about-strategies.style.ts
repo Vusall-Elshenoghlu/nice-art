@@ -10,7 +10,6 @@ const styles = {
         display: 'flex',
         alignItems: 'flex-start',
         marginTop: rem(200),
-        gap: rem(120),
 
         [breakpoint(breakpoints.tabletM)]: {
             flexDirection: 'column',
@@ -23,7 +22,7 @@ const styles = {
         '& span': {
             color: colors.activeLiColor,
             fontSize: rem(16),
-            fontWeight: 600,
+            fontWeight: 800,
             display: 'block',
             marginBottom: rem(15),
         },
@@ -32,7 +31,7 @@ const styles = {
             fontWeight: 800,
             fontSize: rem(44),
             color: colors.liColor,
-            lineHeight: 1.1,
+            lineHeight: 1.3,
             margin: 0,
         },
 
@@ -49,11 +48,11 @@ const styles = {
     },
     strategyCards: {
         display: 'flex',
-        gap: rem(60),
+        gap: rem(130),
         flex: 1,
         alignItems: 'flex-start',
-        marginTop: rem(120),
-        marginBottom: rem(80),
+        marginTop: rem(200),
+        marginBottom: rem(180),
 
         [breakpoint(breakpoints.tabletM)]: {
             flexDirection: 'column',
@@ -67,17 +66,18 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'flex-start',
         textAlign: 'left',
+        borderBottom: `1px solid ${colors.borderBottom}`,
         flex: 1,
         '& h3': {
             fontFamily: fonts.mainFont,
             fontSize: rem(20),
-            fontWeight: 600,
-            color: colors.liColor,
+            fontWeight: 800,
+            color: colors.activeLiColor,
             margin: `${rem(30)} 0 ${rem(15)} 0`,
             lineHeight: 1.3,
         },
         '& p': {
-            color: colors.liColor,
+            color: colors.descriptionColor,
             fontSize: rem(16),
             fontWeight: 400,
             fontFamily: fonts.mainFont,
