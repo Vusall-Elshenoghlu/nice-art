@@ -11,7 +11,7 @@ const commonStyles = {
             fontFamily: fonts.mainFont,
             fontWeight: 400,
             margin: 0,
-            backgroundColor: colors.mainBGColor,
+            backgroundColor: colors.main_bg_color,
         },
         a: {textDecoration: 'none', '&:hover': {color: 'black',},},
         img: {maxWidth: '100%',},

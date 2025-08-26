@@ -7,7 +7,7 @@ import {breakpoint, transition} from 'assets/styles/abstracts/mixins';
 const styles = {
     footerSection: {
         width: '100%',
-        backgroundColor: colors.footerColorWithOpacith,
+        backgroundColor: colors.footer_color_with_opacity,
         display: 'flex',
         flexDirection: 'column',
         minHeight: rem(541),

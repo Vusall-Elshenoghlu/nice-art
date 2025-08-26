@@ -29,15 +29,15 @@ const styles = {
         display: 'flex',
         gap: rem(32),
 
-        [breakpoint(1200)]: {
+        [breakpoint(breakpoints.laptopXL)]: {
             gap: rem(24),
         },
 
-        [breakpoint(1024)]: {
+        [breakpoint(breakpoints.laptopML)]: {
             gap: rem(20),
         },
 
-        [breakpoint(768)]: {
+        [breakpoint(breakpoints.tabletM)]: {
             flexDirection: 'row',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -45,7 +45,7 @@ const styles = {
             width: '100%',
         },
 
-        [breakpoint(480)]: {
+        [breakpoint(breakpoints.mobileL)]: {
             gap: rem(8),
         },
     },
@@ -68,17 +68,17 @@ const styles = {
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
         },
 
-        [breakpoint(768)]: {
+        [breakpoint(breakpoints.tabletM)]: {
             display: 'flex !important',
             order: 1,
         },
 
-        [breakpoint(960)]: {
+        [breakpoint(breakpoints.laptopSM)]: {
             display: 'flex !important',
             order: 1,
         },
 
-        [breakpoint(480)]: {
+        [breakpoint(breakpoints.mobileL)]: {
             fontSize: rem(20),
             padding: rem(6),
             minWidth: rem(32),
@@ -91,7 +91,7 @@ const styles = {
         alignItems: 'center',
         width: 'auto',
         marginLeft: 'auto',
-        [breakpoint(768)]: {
+        [breakpoint(breakpoints.tabletM)]: {
             display: 'none',
         },
     },
@@ -107,19 +107,19 @@ const styles = {
             alignItems: 'center',
         },
 
-        [breakpoint(1200)]: {
+        [breakpoint(breakpoints.laptopXL)]: {
             gap: rem(24),
         },
 
-        [breakpoint(1024)]: {
+        [breakpoint(breakpoints.laptopML)]: {
             gap: rem(20),
         },
 
-        [breakpoint(900)]: {
+        [breakpoint(breakpoints.laptopS)]: {
             gap: rem(16),
         },
 
-        [breakpoint(768)]: {
+        [breakpoint(breakpoints.tabletM)]: {
             display: 'none',
         },
     },
@@ -140,16 +140,16 @@ const styles = {
         },
 
 
-        [breakpoint(1200)]: {
+        [breakpoint(breakpoints.laptopXL)]: {
             fontSize: rem(15),
         },
 
-        [breakpoint(1024)]: {
+        [breakpoint(breakpoints.laptopML)]: {
             fontSize: rem(14),
             padding: `${rem(6)} ${rem(2)}`,
         },
 
-        [breakpoint(900)]: {
+        [breakpoint(breakpoints.laptopS)]: {
             fontSize: rem(13),
             padding: `${rem(4)} ${rem(1)}`,
         },

@@ -15,18 +15,18 @@ export const useButtonStyles = createUseStyles({
     },
     primary: {
         backgroundColor: colors.activeLiColor,
-        color: colors.mainBGColor,
+        color: colors.main_bg_color,
 
     },
     secondary: {
-        backgroundColor: colors.mainBGColor,
+        backgroundColor: colors.main_bg_color,
         color: colors.activeLiColor,
         border: `${rem(1)} solid ${colors.activeLiColor}`,
 
     },
     danger: {
         backgroundColor: '#dc3545',
-        color: colors.mainBGColor,
+        color: colors.main_bg_color,
         '&:hover': {
             backgroundColor: '#bb2d3b',
         },
@@ -37,7 +37,7 @@ export const useButtonStyles = createUseStyles({
         color: '#0d6efd',
         '&:hover': {
             backgroundColor: '#0d6efd',
-            color: colors.mainBGColor,
+            color: colors.main_bg_color,
         },
     },
     sm: {

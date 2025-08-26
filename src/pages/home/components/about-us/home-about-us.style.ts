@@ -10,7 +10,7 @@ const styles = {
         marginTop: rem(200),
         width: '100%',
         height: rem(1067),
-        backgroundColor: colors.activeLiColorWithOpacith,
+        backgroundColor: colors.active_li_color_with_opacity,
         position: 'relative',
         [breakpoint(breakpoints.tabletM)]: {
             marginTop: rem(120),

@@ -13,7 +13,6 @@ import {useStore} from './store/store.config';
 const queryClient = new QueryClient();
 
 function App() {
-    const loader = useStore('loader');
 
     useGlobalStyles();
     return (
@@ -21,7 +20,6 @@ function App() {
             <ConfigProvider theme={themeConfig}>
                 <div className='App'>
                     <RouterProvider router={router}/>
-                    {loader ? <LoaderComponent/> : null}
                 </div>
                 <ToastContainer
                     position='bottom-right'

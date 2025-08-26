@@ -1,12 +1,12 @@
 const colors = {
-    mainBGColor: 'white',
+    main_bg_color: 'white',
     liColor: '#414D44',
     activeLiColor: '#3E6F00',
     borderBottom:'#ecf1e6',
     descriptionColor:'#707872',
-    activeLiColorWithOpacity: 'rgba(62, 111, 0, 0.02)',
-    footerColorWithOpacity: 'rgba(62, 111, 0, 0.04)',
-    partnerColorWithOpacity: 'rgba(62, 111, 0, 0.04)',
+    active_li_color_with_opacity: 'rgba(62, 111, 0, 0.02)',
+    footer_color_with_opacity: 'rgba(62, 111, 0, 0.04)',
+    partner_color_with_opacity: 'rgba(62, 111, 0, 0.04)',
     amountColor: '#404D43',
     footer_copy_right_color: '#6F6C90',
     headerNavBg: '#0E1726',
@@ -72,48 +72,18 @@ const colors = {
 
 //alert
 
-    alertPrimary: '#eaf1ff',
     alertTextPrimary: '#4361ee',
-    alertWarning: '#fff9ed',
-    alertTextWarning: '#e2a03f',
-    alertSuccess: '#ddf5f0',
-    alertTextSuccess: '#1abc9c',
-    alertInfo: '#e7f7ff',
-    alertTextInfo: '#2196f3',
-    alertDark: '#e3e4eb',
-    alertTextDark: '#3b3f5c',
-    alertDanger: '#fff5f5',
-    alertTextDanger: '#e7515a',
 
-//modal
-    modalColor: '#888ea8',
-    modalTorder: '#e0e6ed',
-    modalTitle: '#3b3f5c',
 
-//auth panel
-    authSubtitleText: '#888ea8',
-
-//dropdown
-    dropdownTextColorHover: '#2196f3',
 
 
 //loading
     loadingBackdropBgColor: 'rgba(0,0,0,0.3)',
 
 
-//card
-    cardShadow: 'rgba(94, 92, 154, 0.06)',
 
-
-    //new
-    paleBlue: '#506690',
-    darkBlue: '#0e1726',
-    gray: '#515365',
     main: '#4361ee',
-    leftMenuShadow: '0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06)',
-    boxShadow: '0 0 40px 0 rgba(94, 92, 154, 0.6 )',
-    paleBlack: '#030305',
-    paleHover: '#bfc9d4',
+
 
 };
 

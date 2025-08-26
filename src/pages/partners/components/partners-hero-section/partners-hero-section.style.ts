@@ -68,7 +68,7 @@ const styles = {
             fontWeight: '400',
             lineHeight: rem(24),
             letterSpacing: '0%',
-            color: colors.mainBGColor,
+            color: colors.main_bg_color,
         }
     }
 

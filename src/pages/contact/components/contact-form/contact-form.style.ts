@@ -11,7 +11,7 @@ const styles = {
         width: '100%',
         minHeight: '60vh',
         height: 'auto',
-        backgroundColor: colors.footerColorWithOpacith,
+        backgroundColor: colors.footer_color_with_opacity,
         [breakpoint(breakpoints.tabletM)]: {
             paddingTop: rem(10),
         }
@@ -45,7 +45,7 @@ const styles = {
         width: 'auto',
         height: rem(51),
         borderRadius: rem(4),
-        backgroundColor: colors.mainBGColor,
+        backgroundColor: colors.main_bg_color,
         border: '1px solid #F1F1F1',
         paddingLeft: rem(15),
         display: 'flex',
@@ -77,7 +77,7 @@ const styles = {
             fontSize: rem(16),
             lineHeight: rem(24),
             letterSpacing: '0%',
-            color: colors.mainBGColor
+            color: colors.main_bg_color
         }
     },
     iframe: {

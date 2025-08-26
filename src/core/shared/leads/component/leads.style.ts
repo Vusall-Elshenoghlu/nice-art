@@ -55,7 +55,7 @@ const styles = {
         alignItems: 'center',
         gap: rem(8),
         border: 'none',
-        color: colors.mainBGColor,
+        color: colors.main_bg_color,
         cursor: 'pointer',
         padding: `${rem(12)} ${rem(24)} ${rem(12)} ${rem(24)}`,
         '& p': {
@@ -70,7 +70,7 @@ const styles = {
         height: rem(48),
         borderRadius: rem(8),
         border: `${rem(1)} solid ${colors.activeLiColor}`,
-        backgroundColor: colors.mainBGColor,
+        backgroundColor: colors.main_bg_color,
         color: colors.activeLiColor,
         display: 'flex',
         justifyContent: 'center',
@@ -79,7 +79,7 @@ const styles = {
         gap: rem(8),
         cursor: 'pointer',
         '&:hover': {
-            backgroundColor: colors.activeLiColorWithOpacith,
+            backgroundColor: colors.active_li_color_with_opacity,
         },
 
         '& p': {

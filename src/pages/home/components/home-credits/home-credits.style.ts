@@ -11,11 +11,11 @@ const styles = {
         [breakpoint(breakpoints.tabletM)]: {
             height: 'auto',
             padding: rem(20),
-            backgroundColor: colors.activeLiColorWithOpacith
+            backgroundColor: colors.active_li_color_with_opacity
         },
         [breakpoint(breakpoints.mobileL)]: {
             padding: rem(10),
-            backgroundColor: colors.activeLiColorWithOpacith
+            backgroundColor: colors.active_li_color_with_opacity
 
         },
     },
@@ -68,7 +68,7 @@ const styles = {
         width: '90%',
         marginLeft: 'auto',
         height: rem(583),
-        backgroundColor: colors.activeLiColorWithOpacith,
+        backgroundColor: colors.active_li_color_with_opacity,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
@@ -117,7 +117,7 @@ const styles = {
     input: {
         width: rem(215),
         height: rem(51),
-        backgroundColor: colors.mainBGColor,
+        backgroundColor: colors.main_bg_color,
         border: '1px solid #E5E5E5',
         padding: `0 ${rem(20)}`,
         display: 'flex',
@@ -145,7 +145,7 @@ const styles = {
         width: '100%',
         height: rem(51),
         borderRadius: rem(4),
-        backgroundColor: colors.mainBGColor,
+        backgroundColor: colors.main_bg_color,
         border: '1px solid #F1F1F1',
         paddingLeft: rem(15),
         display: 'flex',
@@ -228,7 +228,7 @@ const styles = {
         gap: rem(10),
 
         '& p': {
-            color: colors.mainBGColor,
+            color: colors.main_bg_color,
             fontSize: rem(16),
             lineHeight: rem(24),
             fontWeight: '400',
