@@ -5,39 +5,111 @@ import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
 import colors from '../../../../assets/styles/abstracts/color';
 
 const styles = {
-    wrapper: {
-        width: '100%',
-        marginTop: rem(300),
-
-        '& h6': {
-            fontSize: rem(16),
-            fontWeight: '800',
-            lineHeight: '100%',
-            letterSpacing: '0%',
-            color: colors.activeLiColor,
-        },
-        '& h1': {
-            fontSize: rem(44),
-            fontWeight: '800',
-            lineHeight: '100%',
-            color: colors.liColor,
-            [breakpoint(breakpoints.tabletM)]: {
-                fontSize: rem(30),
-            }
-        },
-        '& p': {
-            fontSize: rem(16),
-            fontWeight: '400',
-            lineHeight: rem(24),
-            letterSpacing: '0%',
-            color: colors.liColor,
-            [breakpoint(breakpoints.tabletM)]: {
-                marginTop:  rem(8),
-            }
-        },
+    titleTextBig: {
+        fontWeight: 'bold',
+        fontSize: 70,
+        lineHeight: 1,
+        letterSpacing: 0,
+        color: colors.activeLiColor,
         [breakpoint(breakpoints.tabletM)]: {
-            marginTop: rem(0),
+            fontSize: rem(37),
+            lineHeight: '100%',
+            marginBottom: rem(15),
+            fontWeight: '800',
         }
+    },
+    titleTextSmall: {
+        fontWeight: 'bold',
+        fontSize: 60,
+        lineHeight: 1,
+        letterSpacing: 0,
+        color: colors.activeLiColor,
+        [breakpoint(breakpoints.tabletM)]: {
+            fontSize: rem(37),
+            lineHeight: '100%',
+            marginBottom: rem(15),
+            fontWeight: '800',
+        }
+    },
+
+    tagText: {
+        fontWeight: '800',
+        color: colors.activeLiColor,
+    },
+    headingText: {
+        marginTop: rem(15),
+        fontWeight: '800',
+        fontSize: rem(44),
+        lineHeight: '100%',
+        letterSpacing: '0%',
+        color: colors.liColor,
+
+        [breakpoint(breakpoints.tabletM)]: {
+            fontSize: rem(32),
+        },
+        [breakpoint(breakpoints.mobileL)]: {
+            fontSize: rem(24),
+            lineHeight: '110%',
+        },
+    },
+    descriptionLeftText: {
+        marginTop: rem(10),
+        fontSize: rem(16),
+        lineHeight: rem(22),
+        letterSpacing: '0%',
+        color: colors.liColor,
+
+        [breakpoint(breakpoints.tabletM)]: {
+            fontSize: rem(14),
+            lineHeight: rem(20),
+        },
+        [breakpoint(breakpoints.mobileL)]: {
+            fontSize: rem(13),
+            lineHeight: rem(18),
+            textAlign: 'justify',
+        },
+    },
+    descriptionRightText: {
+        marginTop: rem(10),
+        fontSize: rem(16),
+        lineHeight: rem(22),
+        letterSpacing: '0%',
+        color: colors.liColor,
+
+        [breakpoint(breakpoints.tabletM)]: {
+            fontSize: rem(14),
+            lineHeight: rem(20),
+        },
+        [breakpoint(breakpoints.mobileL)]: {
+            fontSize: rem(13),
+            lineHeight: rem(18),
+            textAlign: 'justify',
+        },
+    },
+    learnMoreText: {
+        marginTop: rem(20),
+        fontWeight: '600',
+        fontSize: rem(20),
+        lineHeight: rem(22),
+        letterSpacing: '0%',
+        color: colors.liColor,
+        cursor: 'pointer',
+
+        [breakpoint(breakpoints.mobileL)]: {
+            fontSize: rem(16),
+        },
+    },
+    lineDiv: {
+        marginTop: rem(8),
+        height: rem(4),
+        width: rem(105),
+        backgroundColor: colors.activeLiColor,
+        cursor: 'pointer',
+
+        [breakpoint(breakpoints.mobileL)]: {
+            width: rem(80),
+            height: rem(3),
+        },
     },
     buttons: {
         display: 'flex',
@@ -88,6 +160,46 @@ const styles = {
             fontWeight: '400',
             letterSpacing: '0%',
         }
+    },
+    partnerBtn: {
+        width: rem(215),
+        height: rem(48),
+        borderRadius: rem(8),
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: rem(12),
+        border: 'none',
+        marginTop: rem(15),
+        cursor: 'pointer',
+        backgroundColor: colors.activeLiColor,
+        '& p': {
+            fontSize: rem(16),
+            fontWeight: '400',
+            lineHeight: rem(24),
+            letterSpacing: '0%',
+            color: colors.main_bg_color,
+        }
+    },
+    rightDiv: {
+        width: rem(470),
+        height: rem(543),
+        '& img': {
+            height: '100%',
+            width: 'auto',
+            objectFit: 'cover',
+            overflow: 'hidden',
+        },
+
+        [breakpoint(breakpoints.tabletM)]: {
+            width: '100%',
+            height: 'auto',
+        },
+        [breakpoint(breakpoints.mobileL)]: {
+            width: '100%',
+            height: 'auto',
+            marginTop: rem(20),
+        },
     }
 };
 

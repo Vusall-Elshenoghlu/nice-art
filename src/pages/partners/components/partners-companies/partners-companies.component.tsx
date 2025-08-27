@@ -1,6 +1,6 @@
 import useLocalization from '../../../../assets/lang';
 import {usePartnersCompaniesStyles} from './partners-companies.style';
-import {usePartnersCompanyQuery} from './actions/partners-companies.query';
+import {usePartnersCompanyQuery} from '../../actions/partners-companies.query';
 import {IPartnersCompany} from './partners-companies';
 import {Modal, Spin} from 'antd';
 import {useCallback, useState} from 'react';

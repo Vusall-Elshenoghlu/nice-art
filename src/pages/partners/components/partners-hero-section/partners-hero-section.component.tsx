@@ -3,12 +3,12 @@ import {usePartnerHeroSectionStyles} from './partners-hero-section.style';
 import {Link} from 'react-router-dom';
 import {Routes} from '../../../../router/routes';
 import {HomeIcon} from '../../../../assets/images/icons/home-icon';
-import {ArrowRight, ArrowSmallRight} from '../../../../assets/images/icons/arrows';
+import { ArrowSmallRight} from '../../../../assets/images/icons/arrows';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
 import {Spin} from 'antd';
-import Button from '../../../../core/shared/button/button.component';
+import LeadComponent from '../../../../core/shared/leads/component/leads.component';
 
-const PartnersHeroSectionComponent = () => {
+ const PartnersHeroSectionComponent = () => {
     const translate = useLocalization();
     const classes = usePartnerHeroSectionStyles();
     const {data: leads = [], isLoading} = useLeadQuery();
@@ -28,19 +28,7 @@ const PartnersHeroSectionComponent = () => {
                 <h2>{translate('navbar_partners')}</h2>
             </div>
 
-            <div className={'row'}>
-                <div className={'col-lg-6 col-md-6 col-sm-12 '}>
-                    <h1 className={classes.titleText}>{heroLead?.title}</h1>
-                </div>
-                <div className={'col-lg-6 col-md-6 col-sm-12 '}>
-                    <h2 className={classes.headintText}>{heroLead?.heading}</h2>
-                    <p className={classes.malesudaParagraph}>{heroLead?.description} </p>
-                    <Button className={classes.partnerBtn}>
-                        <p>{translate('partners_hero_btn')}</p>
-                        <ArrowRight/>
-                    </Button>
-                </div>
-            </div>
+            <LeadComponent heroLead={heroLead} isLoading={isLoading} isTitleBig={true} isHeadingRight={true} isDescriptionRight={true} isOneButton={true}/>
 
 
         </div>

@@ -7,8 +7,7 @@ import colors from '../../../../assets/styles/abstracts/color';
 const styles = {
     wrapper: {
         width: '100%',
-        marginTop: rem(300),
-
+        marginTop: rem(250),
         '& h6': {
             fontSize: rem(16),
             fontWeight: '800',
@@ -36,7 +35,7 @@ const styles = {
             }
         },
         [breakpoint(breakpoints.tabletM)]: {
-            marginTop: rem(0),
+            marginTop: rem(10),
         }
     }
 };

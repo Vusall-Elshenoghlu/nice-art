@@ -1,5 +1,5 @@
-import {IFileModel} from '../../../../home/components/about-us/home-about-us';
-import {IPartnersCompany} from '../partners-companies';
+import {IFileModel} from '../../home/components/about-us/home-about-us';
+import {IPartnersCompany} from '../components/partners-companies/partners-companies';
 
 export class PartnersCompaniesModel {
     public id!: number;

@@ -6,6 +6,7 @@ import {useAboutUsVideoQuery} from '../../actions/about-us.queries';
 import {useState} from 'react';
 import {Modal, Spin} from 'antd';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
+import LeadComponent from '../../../../core/shared/leads/component/leads.component';
 
 const HomeAboutUsComponent = () => {
     const classes = useHomeAboutUsStyles();
@@ -59,23 +60,7 @@ const HomeAboutUsComponent = () => {
                     </p>
 
                     <div className={classes.aboutUsContainer}>
-                        <div className={'row'}>
-                            <div className={'col-lg-6 col-md-6 col-sm-12'}>
-                                <div className={classes.leftDiv}>
-                                    <h5>{heroLead?.tag}</h5>
-                                    <h1>{heroLead?.heading}</h1>
-                                    <p className={'mt-10'}>{heroLead?.description}</p>
-                                    <h4 className={'mt-20'}>{translate('home_about_learn_more')}</h4>
-                                    <div className={classes.lineDiv}></div>
-                                </div>
-                            </div>
-                            <div className={'col-lg-6 col-md-6 col-sm-12'}>
-                                <div className={classes.rightDiv}>
-                                    <img src={heroLead?.file?.url} alt={translate('home_about_image_alt')}/>
-                                </div>
-                            </div>
-
-                        </div>
+                        <LeadComponent heroLead={heroLead} isLoading={isLoadingLeads} isTagLeft={true} isHeadingLeft={true} isDescriptionLeft={true} isFile={true} isLearnMore={true}/>
                     </div>
                 </div>
             </div>

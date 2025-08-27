@@ -7,12 +7,13 @@ import {Routes} from '../../../../router/routes';
 import useLocalization from '../../../../assets/lang';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
 import {Spin} from 'antd';
+import LeadComponent from '../../../../core/shared/leads/component/leads.component';
 
 const AboutHeaderComponent = () => {
     const classes = useAboutHeaderStyles();
     const translate = useLocalization();
-    const {data:products=[], isLoading} = useLeadQuery();
-    const filteredProducts = products.filter(products => products.tag==='About');
+    const {data:leads=[], isLoading} = useLeadQuery();
+    const heroLead = leads.find(lead => lead.id === 5);
 
     if (isLoading) {
         return (
@@ -30,21 +31,7 @@ const AboutHeaderComponent = () => {
                 <h2>{translate('about_breadcrumb_title')}</h2>
             </div>
 
-            {filteredProducts.map(({id, heading, description}) => {
-                return(
-                    <div key={id} className={classes.aboutTitleSection}>
-                        <div className={classes.firstTitle}>
-                            <h1>{translate('about_title')}</h1>
-                        </div>
-                        <div className={classes.secondTitle}>
-                            <p className={classes.bizKimik}>{translate('about_who_we_are')}</p>
-                            <h1>{heading}</h1>
-                            <p className={classes.description}>{description}</p>
-                        </div>
-                    </div>
-                );
-            })}
-
+            <LeadComponent isLoading={isLoading} heroLead={heroLead} isTitleSmall={true} isTagRight={true} isHeadingRight={true} isDescriptionRight={true}/>
             <div className={classes.imgSection}>
                 <img src={mainImg} alt={translate('about_main_image_alt')} />
             </div>

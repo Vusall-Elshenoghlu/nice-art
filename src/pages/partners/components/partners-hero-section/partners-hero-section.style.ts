@@ -25,52 +25,6 @@ const styles = {
             }
         }
     },
-    titleText: {
-        fontWeight: 'bold',
-        fontSize: 70,
-        lineHeight: 1,
-        letterSpacing: 0,
-        color: colors.activeLiColor,
-        [breakpoint(breakpoints.tabletM)]: {
-            fontSize: rem(37),
-            lineHeight: '100%',
-            marginBottom: rem(15),
-            fontWeight: '800',
-        }
-    },
-    headintText: {
-        fontWeight: '800',
-        fontSize: rem(44),
-        lineHeight: '100%',
-        letterSpacing: '0%',
-    },
-    malesudaParagraph: {
-        marginTop: rem(10),
-        fontSize: rem(16),
-        lineHeight: rem(22),
-        fontWeight: '400',
-        color: colors.liColor,
-    },
-    partnerBtn: {
-        width: rem(215),
-        height: rem(48),
-        borderRadius: rem(8),
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: rem(12),
-        border: 'none',
-        marginTop: rem(15),
-        cursor: 'pointer',
-        backgroundColor: colors.activeLiColor,
-        '& p': {
-            fontSize: rem(16),
-            fontWeight: '400',
-            lineHeight: rem(24),
-            letterSpacing: '0%',
-            color: colors.main_bg_color,
-        }
-    }
 
 };
 export const usePartnerHeroSectionStyles = createUseStyles(styles);

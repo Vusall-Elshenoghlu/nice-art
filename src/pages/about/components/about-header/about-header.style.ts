@@ -81,7 +81,7 @@ const styles = {
             }
         }
     },
-    bizKimik: {
+    whoAreWe: {
         color: colors.activeLiColor,
         fontSize: rem(16),
         fontWeight: 600,

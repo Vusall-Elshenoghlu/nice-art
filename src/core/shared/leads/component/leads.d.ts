@@ -12,4 +12,15 @@ interface LeadComponentProps {
     heroLead?: Lead;
     isLoading: boolean;
     isButtons?: boolean;
+    isOneButton?: boolean;
+    isTitleBig?: boolean;
+    isTitleSmall?: boolean;
+    isTagLeft?: boolean;
+    isTagRight?: boolean;
+    isHeadingLeft?: boolean;
+    isHeadingRight?: boolean;
+    isDescriptionLeft?: boolean;
+    isDescriptionRight?: boolean;
+    isFile?: boolean;
+    isLearnMore? :boolean;
 }
