@@ -21,4 +21,5 @@ interface LeadComponentProps {
     file?: boolean;
     isLearnMore? :boolean;
     isOnlyContent? :boolean;
+    children?: React.ReactNode;
 }

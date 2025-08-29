@@ -65,13 +65,13 @@ const PartnersCompaniesComponent = () => {
                                 </div>
                                 <h5 className={classes.modalDescrip}>{selectedPartner?.description}</h5>
                                 <div className={classes.buttons}>
-                                    <Button className={classes.visitBtn}>
+                                    <Button variant={'primary'} className={classes.visitBtn} >
                                         <a href={selectedPartner?.site}
                                            target={'_blank'}>{translate('partners_companies_visit')}</a>
                                         <ArrowRightUp/>
 
                                     </Button>
-                                    <Button className={classes.closeBtn} onClick={() => setIsModalOpen(false)}>
+                                    <Button variant={'close'} className={classes.closeBtn} onClick={() => setIsModalOpen(false)}>
                                         <p>Close</p>
                                     </Button>
 

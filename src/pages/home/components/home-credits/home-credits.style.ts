@@ -217,16 +217,9 @@ const styles = {
     applyBtn: {
         width: '100%',
         height: rem(48),
-        borderRadius: rem(8),
         padding: `${rem(12)} ${rem(24)}`,
         border: 'none',
-        backgroundColor: colors.activeLiColor,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        cursor: 'pointer',
         gap: rem(10),
-
         '& p': {
             color: colors.main_bg_color,
             fontSize: rem(16),

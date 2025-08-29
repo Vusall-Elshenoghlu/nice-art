@@ -1,4 +1,3 @@
-// Button.tsx
 import React from 'react';
 import { IButtonProps } from './button';
 import { useButtonStyles } from './button.style';

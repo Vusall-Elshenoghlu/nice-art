@@ -2,7 +2,7 @@ import {createUseStyles} from 'react-jss';
 import {rem} from 'assets/styles/abstracts/functions';
 import colors from 'assets/styles/abstracts/color';
 import fonts from 'assets/styles/abstracts/fonts';
-import {breakpoint} from '../../../../../assets/styles/abstracts/mixins';
+import {breakpoint, transition} from '../../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../../assets/styles/abstracts/sizes';
 
 interface HeaderProps {
@@ -57,7 +57,7 @@ const styles = {
         cursor: 'pointer',
         padding: rem(8),
         borderRadius: rem(4),
-        transition: 'background-color 0.3s ease',
+        transition: transition('background-color', 0.3, null),
         minWidth: rem(40),
         minHeight: rem(40),
         alignItems: 'center',

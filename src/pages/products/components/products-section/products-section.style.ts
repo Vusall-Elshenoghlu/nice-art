@@ -1,7 +1,7 @@
 import {createUseStyles} from 'react-jss';
 import {rem} from '../../../../assets/styles/abstracts/functions';
 import colors from '../../../../assets/styles/abstracts/color';
-import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
+import {breakpoint, transition} from '../../../../assets/styles/abstracts/mixins';
 import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
 
 const styles = {
@@ -210,7 +210,7 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         gap: rem(8),
-        transition: 'all 0.2s ease',
+        transition: transition(null, 0.2, null),
         alignSelf: 'flex-start',
 
         [breakpoint(breakpoints.tabletM)]: {
@@ -255,8 +255,7 @@ const styles = {
 
     arrow: {
         fontSize: rem(16),
-        transition: 'transform 0.2s ease',
-
+        transition: transition('transform', 0.2, null),
         [breakpoint(breakpoints.tabletM)]: {
             fontSize: rem(14),
         },

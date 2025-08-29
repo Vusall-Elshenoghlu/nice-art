@@ -135,15 +135,7 @@ const styles = {
     visitBtn: {
         width: rem(282),
         height: rem(48),
-        borderRadius: rem(8),
-        display: 'flex',
-        gap: rem(6),
 
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.activeLiColor,
-        border: 'none',
-        cursor: 'pointer',
         [breakpoint(breakpoints.tabletM)]: {
             width: rem(150),
         },
@@ -161,13 +153,14 @@ const styles = {
         borderRadius: rem(8),
         backgroundColor: 'transparent',
         display: 'flex',
+        border: '1px solid #3E6F00 !important',
         justifyContent: 'center',
         alignItems: 'center',
         cursor: 'pointer',
         [breakpoint(breakpoints.tabletM)]: {
             width: rem(150),
         },
-        '&': {
+        '& p': {
             fontWeight: '400',
             fontSize: rem(16),
             lineHeight: rem(24),

@@ -185,7 +185,7 @@ const HomeCreditsComponent = () => {
                                                 </Checkbox>
                                             </div>
                                             <div className={'col-lg-6 col-md-6 col-sm-12 '}>
-                                                <Button type={'submit'} className={classes.applyBtn}>
+                                                <Button variant={'primary'} type={'submit'} className={classes.applyBtn}>
                                                     <p>{translate('home_credits_apply')}</p>
                                                     <ArrowRight/>
                                                 </Button>

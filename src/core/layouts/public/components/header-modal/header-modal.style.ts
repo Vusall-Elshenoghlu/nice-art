@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import { rem } from '../../../../../assets/styles/abstracts/functions';
 import colors from '../../../../../assets/styles/abstracts/color';
+import {transition} from '../../../../../assets/styles/abstracts/mixins';
 
 const styles = {
     modalOverlay: {
@@ -56,7 +57,7 @@ const styles = {
         fontWeight: 600,
         color: colors.liColor,
         textDecoration: 'none',
-        transition: '0.3s',
+        transition: transition(null, 0.3, null),
         '&:hover': {
             color: colors.activeLiColor,
         }
@@ -68,7 +69,7 @@ const styles = {
         '& a': {
             fontSize: rem(20),
             color: colors.liColor,
-            transition: '0.3s',
+            transition: transition(null, 0.3, null),
             '&:hover': {
                 color: colors.activeLiColor,
             }

@@ -16,11 +16,10 @@ const LeadComponent = ({
                            isTitleSmall,
                            tag,
                            heading,
-                           isButtons,
-                           isOneButton,
                            description,
                            file,
-                           isOnlyContent
+                           isOnlyContent,
+                           children,
                        }: LeadComponentProps) => {
     const classes = useLeadsStyles();
     const translate = useLocalization();

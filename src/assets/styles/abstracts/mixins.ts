@@ -3,4 +3,4 @@ const mixins = {
     transition: (property: string | null = 'all', duration: number | null = 0.3, timingFunction: string | null = 'ease') => `${property} ${duration}s ${timingFunction}`,
 };
 
-export const {breakpoint, transition,} = mixins;
+export const {breakpoint, transition} = mixins;
