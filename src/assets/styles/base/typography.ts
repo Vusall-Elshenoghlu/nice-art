@@ -4,8 +4,8 @@ import nunitoSemiBold from '../../fonts/Nunito/NunitoSans-SemiBold.ttf';
 import nunitoRegular from '../../fonts/Nunito/NunitoSans-Regular.ttf';
 import nunitoThin from '../../fonts/Nunito/NunitoSans-ExtraLight.ttf';
 import nunitoXBlack from '../../fonts/Nunito/NunitoSans-ExtraBold.ttf';
-import westTrialRegular from '../../fonts/Nunito/NunitoSans-Regular.ttf';
-import westTrialBold from '../../fonts/Nunito/NunitoSans-Regular.ttf';
+import westTrialRegular from '../../fonts/WestTrial/WestTrial-Regular.otf';
+import westTrialBold from '../../fonts/WestTrial/WestTrial-Bold.otf';
 const typography = {
     '@font-face': [
         {
