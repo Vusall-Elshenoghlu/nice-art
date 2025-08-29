@@ -17,8 +17,7 @@ const HomeProductsComponent = () => {
     return (
         <div className='container'>
             <div className={classes.wrapper}>
-                <LeadComponent heroLead={heroLead} isLoading={isLoading} isTagLeft={true} isHeadingLeft={true}
-                               isDescriptionRight={true}/>
+                <LeadComponent heroLead={heroLead} isLoading={isLoading}/>
             </div>
         </div>
     );

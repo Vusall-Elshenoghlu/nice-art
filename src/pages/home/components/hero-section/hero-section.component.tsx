@@ -14,7 +14,7 @@ const HeroSectionComponent = () => {
     }
     return (
         <div className='container mt-50'>
-            <LeadComponent heroLead={heroLead} isLoading={isLoading} isTitleBig={true} isDescriptionRight={true} isButtons={true}/>
+            <LeadComponent heroLead={heroLead} isLoading={isLoading} />
         </div>
     );
 };

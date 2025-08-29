@@ -9,18 +9,16 @@ export interface ILeads {
     file: IFileModel | null;
 }
 interface LeadComponentProps {
-    heroLead?: Lead;
+    heroLead?: ILeads;
     isLoading: boolean;
     isButtons?: boolean;
     isOneButton?: boolean;
     isTitleBig?: boolean;
     isTitleSmall?: boolean;
-    isTagLeft?: boolean;
-    isTagRight?: boolean;
-    isHeadingLeft?: boolean;
-    isHeadingRight?: boolean;
-    isDescriptionLeft?: boolean;
-    isDescriptionRight?: boolean;
-    isFile?: boolean;
+    tag?: boolean;
+    heading?: boolean;
+    description?: boolean;
+    file?: boolean;
     isLearnMore? :boolean;
+    isOnlyContent? :boolean;
 }

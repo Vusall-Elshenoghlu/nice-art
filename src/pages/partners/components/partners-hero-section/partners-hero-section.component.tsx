@@ -15,20 +15,20 @@ import LeadComponent from '../../../../core/shared/leads/component/leads.compone
     const heroLead = leads.find(lead => lead.id === 9);
     if (isLoading) {
         return (
-            <div className="d-flex justify-content-center align-items-center">
-                <Spin size="large" />
+            <div className='d-flex justify-content-center align-items-center'>
+                <Spin size='large' />
             </div>
         );
     }
     return (
-        <div className="container">
+        <div className='container'>
             <div className={classes.homeIconSection}>
                 <Link to={Routes.home}><HomeIcon/></Link>
                 <ArrowSmallRight/>
                 <h2>{translate('navbar_partners')}</h2>
             </div>
 
-            <LeadComponent heroLead={heroLead} isLoading={isLoading} isTitleBig={true} isHeadingRight={true} isDescriptionRight={true} isOneButton={true}/>
+            <LeadComponent heroLead={heroLead} isLoading={isLoading} isTitleBig={true}  isOneButton={true}/>
 
 
         </div>

@@ -9,6 +9,7 @@ import {rem} from '../../../../assets/styles/abstracts/functions';
 import {ArrowRight} from '../../../../assets/images/icons/arrows';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
 import Button from '../../../../core/shared/button/button.component';
+import LeadComponent from '../../../../core/shared/leads/component/leads.component';
 
 const HomeCreditsComponent = () => {
     const translate = useLocalization();
@@ -55,10 +56,7 @@ const HomeCreditsComponent = () => {
                 <div className={'row'}>
                     <div className={'col-lg-1'}>
                         <div className={classes.leftDiv}>
-                            <h6>{heroLead?.tag}</h6>
-                            <h1>{heroLead?.heading}</h1>
-                            <p>{translate('home_credits_description')}</p>
-
+                            <LeadComponent heroLead={heroLead} isLoading={isLoading} isOnlyContent tag heading/>
                         </div>
                     </div>
                     <div className={'col-lg-11'}>

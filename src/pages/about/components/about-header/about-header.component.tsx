@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom';
-import mainImg from '/src/assets/images/statics/about-page-image.png';
 import {useAboutHeaderStyles} from './about-header.style';
 import {HomeIcon} from '../../../../assets/images/icons/home-icon';
 import {ArrowSmallRight} from '../../../../assets/images/icons/arrows';
@@ -31,10 +30,8 @@ const AboutHeaderComponent = () => {
                 <h2>{translate('about_breadcrumb_title')}</h2>
             </div>
 
-            <LeadComponent isLoading={isLoading} heroLead={heroLead} isTitleSmall={true} isTagRight={true} isHeadingRight={true} isDescriptionRight={true}/>
-            <div className={classes.imgSection}>
-                <img src={mainImg} alt={translate('about_main_image_alt')} />
-            </div>
+            <LeadComponent isLoading={isLoading} heroLead={heroLead} file/>
+
 
         </div>
     );
