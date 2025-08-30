@@ -17,7 +17,7 @@ const HomeProductsComponent = () => {
     return (
         <div className='container'>
             <div className={classes.wrapper}>
-                <LeadComponent heroLead={heroLead} isLoading={isLoading}/>
+                <LeadComponent heroLead={heroLead} isLoading={isLoading} title tag heading />
             </div>
         </div>
     );

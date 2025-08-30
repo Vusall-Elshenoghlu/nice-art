@@ -60,7 +60,7 @@ const HomeAboutUsComponent = () => {
                     </p>
 
                     <div className={classes.aboutUsContainer}>
-                        <LeadComponent heroLead={heroLead} isLoading={isLoadingLeads} file/>
+                        <LeadComponent heroLead={heroLead} isLoading={isLoadingLeads} file tag  description heading/>
                     </div>
                 </div>
             </div>

@@ -13,13 +13,13 @@ interface LeadComponentProps {
     isLoading: boolean;
     isButtons?: boolean;
     isOneButton?: boolean;
-    isTitleBig?: boolean;
-    isTitleSmall?: boolean;
+    title?: boolean;
     tag?: boolean;
     heading?: boolean;
     description?: boolean;
     file?: boolean;
     isLearnMore? :boolean;
     isOnlyContent? :boolean;
+    titleVariant?: string;
     children?: React.ReactNode;
 }

@@ -8,17 +8,18 @@ import Button from '../../button/button.component';
 import useLocalization from '../../../../assets/lang';
 import {ArrowRight, ArrowSmallDown} from '../../../../assets/images/icons/arrows';
 import mainImg from '/src/assets/images/statics/about-page-image.png';
+import classNames from 'classnames';
 
 const LeadComponent = ({
                            heroLead,
                            isLoading,
-                           isTitleBig,
-                           isTitleSmall,
+                           title,
                            tag,
                            heading,
                            description,
                            file,
                            isOnlyContent,
+                           titleVariant,
                            children,
                        }: LeadComponentProps) => {
     const classes = useLeadsStyles();
@@ -97,10 +98,32 @@ const LeadComponent = ({
                 ) : (
                     <>
                         <div className='col-lg-6 col-md-6 col-sm-12'>
-
+                            {
+                                title && heroLead?.title ? (
+                                    <>
+                                        <h1 className={classNames(
+                                            titleVariant === 'big' ? classes.titleTextBig : classes.titleTextSmall
+                                        )}
+                                        >
+                                            {heroLead?.title}
+                                        </h1>
+                                    </>
+                                ) : (
+                                    <>
+                                        {returnSmallContent}
+                                    </>
+                                )
+                            }
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12'>
-
+                            {
+                                title && heroLead?.title ? (
+                                    <>
+                                        {returnSmallContent}
+                                        {children}
+                                    </>
+                                ): (<p className={classes.descriptionRightText}>{heroLead?.description}</p>)
+                            }
                         </div>
 
                     </>
