@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Routes } from '../../../../../router/routes';
 import { FacebookOutlined, InstagramOutlined, LinkedinOutlined, YoutubeOutlined } from '@ant-design/icons';
 import useLocalization from '../../../../../assets/lang';
+import Button from '../../../../shared/button/button.component';
 
 const HeaderModalComponent = ({ setIsOpenMenu }: { setIsOpenMenu: (open: boolean) => void }) => {
     const classes = useHeaderModalStyles();
@@ -25,9 +26,9 @@ const HeaderModalComponent = ({ setIsOpenMenu }: { setIsOpenMenu: (open: boolean
     return (
         <div className={classes.modalOverlay}>
             <div className={classes.modalContent}>
-                <button className={classes.closeBtn} onClick={() => setIsOpenMenu(false)}>
+                <Button className={classes.closeBtn} onClick={() => setIsOpenMenu(false)}>
                     ✕
-                </button>
+                </Button>
 
                 <nav className={classes.nav}>
                     <ul>

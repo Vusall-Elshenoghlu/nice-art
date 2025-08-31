@@ -150,13 +150,6 @@ const styles = {
     closeBtn: {
         width: rem(282),
         height: rem(48),
-        borderRadius: rem(8),
-        backgroundColor: 'transparent',
-        display: 'flex',
-        border: '1px solid #3E6F00 !important',
-        justifyContent: 'center',
-        alignItems: 'center',
-        cursor: 'pointer',
         [breakpoint(breakpoints.tabletM)]: {
             width: rem(150),
         },

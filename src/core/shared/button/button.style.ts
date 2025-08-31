@@ -33,8 +33,10 @@ export const useButtonStyles = createUseStyles({
 
     },
     close: {
+        borderRadius: rem(8),
         backgroundColor: 'transparent',
         display: 'flex',
+        border: '1px solid #3E6F00 !important',
         justifyContent: 'center',
         alignItems: 'center',
         cursor: 'pointer',

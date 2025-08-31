@@ -1,4 +1,3 @@
-import {environment} from 'core/configs/app.config';
 import {useFooterStyles} from './footer.style';
 import useLocalization from 'assets/lang';
 import logoImg from 'assets/images/statics/Logo.png';

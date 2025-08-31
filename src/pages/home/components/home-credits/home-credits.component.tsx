@@ -46,7 +46,7 @@ const HomeCreditsComponent = () => {
     if (isLoading) {
         return (
             <div className='d-flex justify-content-center align-items-center'>
-                <Spin size="large"/>
+                <Spin size='large'/>
             </div>
         );
     }

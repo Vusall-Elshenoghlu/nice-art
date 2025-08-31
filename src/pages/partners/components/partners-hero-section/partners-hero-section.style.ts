@@ -25,6 +25,19 @@ const styles = {
             }
         }
     },
-
+    partnerBtn: {
+        width: rem(215),
+        height: rem(48),
+        gap: rem(12),
+        border: 'none',
+        marginTop: rem(15),
+        '& p': {
+            fontSize: rem(16),
+            fontWeight: '400',
+            lineHeight: rem(24),
+            letterSpacing: '0%',
+            color: colors.main_bg_color,
+        }
+    },
 };
 export const usePartnerHeroSectionStyles = createUseStyles(styles);

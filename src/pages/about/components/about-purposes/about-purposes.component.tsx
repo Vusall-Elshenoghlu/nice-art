@@ -2,21 +2,28 @@ import {useAboutPurposesStyles} from './about-purposes.style';
 import {FingerPrint} from '../../../../assets/images/icons/finger-print';
 import useLocalization from '../../../../assets/lang';
 import {usePurposesQuery} from '../../actions/purposes/purposes.query';
+import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
+import {Spin} from 'antd';
+import LeadComponent from '../../../../core/shared/leads/component/leads.component';
 
 const AboutPurposesComponent = () => {
     const classes = useAboutPurposesStyles();
     const translate = useLocalization();
     const {data: purposes = []} = usePurposesQuery();
-
+    const {data: leads = [], isLoading: isLoading} = useLeadQuery();
+    const heroLead = leads.find(lead => lead.id === 6);
+    if (isLoading) {
+        return (
+            <div className='d-flex justify-content-center align-items-center'>
+                <Spin size='large' />
+            </div>
+        );
+    }
     return (
         <div className={'container'}>
             <div className={classes.ourGoals}>
                 <div className={classes.leftSection}>
-                    <span>{translate('about_purpose')}</span>
-                    <h2>{translate('about_purpose_subtitle')}</h2>
-                    <p className={classes.description}>
-                        {translate('about_purpose_description')}
-                    </p>
+                    <LeadComponent heroLead={heroLead} isLoading={isLoading} isOnlyContent tag heading description/>
                 </div>
 
                 <div className={classes.backgroundSection}>

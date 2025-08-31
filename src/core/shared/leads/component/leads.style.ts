@@ -161,26 +161,6 @@ const styles = {
             letterSpacing: '0%',
         }
     },
-    partnerBtn: {
-        width: rem(215),
-        height: rem(48),
-        borderRadius: rem(8),
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: rem(12),
-        border: 'none',
-        marginTop: rem(15),
-        cursor: 'pointer',
-        backgroundColor: colors.activeLiColor,
-        '& p': {
-            fontSize: rem(16),
-            fontWeight: '400',
-            lineHeight: rem(24),
-            letterSpacing: '0%',
-            color: colors.main_bg_color,
-        }
-    },
     rightDiv: {
         width: rem(470),
         height: rem(543),

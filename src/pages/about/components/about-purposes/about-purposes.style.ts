@@ -39,44 +39,9 @@ const styles = {
         position: 'absolute',
         left: 0,
         top: rem(260),
-        width:'100%',
+        width:'50%',
         zIndex: 2,
         whiteSpace: 'pre-line',
-
-        '& span': {
-            color: colors.activeLiColor,
-            fontSize: rem(16),
-            fontWeight: 600,
-            margin: 0,
-            marginBottom: rem(15),
-            display: 'block',
-        },
-
-        '& h2': {
-            fontFamily: fonts.mainFont,
-            fontWeight: 800,
-            fontSize: rem(44),
-            color: colors.liColor,
-            lineHeight: 1.1,
-            margin: 0,
-            marginBottom: rem(20),
-        },
-
-        [breakpoint(breakpoints.tabletM)]: {
-            position: 'static',
-            width: 'auto',
-            zIndex: 'auto',
-            marginBottom: rem(24),
-            padding: `0 ${rem(20)}`,
-            '& h2': {
-                fontSize: rem(28),
-                marginBottom: rem(16),
-            },
-            '& span': {
-                fontSize: rem(14),
-                marginBottom: rem(12),
-            }
-        }
     },
     rightSection: {
         flex: 1,

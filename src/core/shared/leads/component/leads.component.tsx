@@ -2,11 +2,7 @@ import React, {useMemo} from 'react';
 import {Spin} from 'antd';
 import {useLeadsStyles} from './leads.style';
 import {LeadComponentProps} from './leads';
-import {Link} from 'react-router-dom';
-import {Routes} from '../../../../router/routes';
-import Button from '../../button/button.component';
 import useLocalization from '../../../../assets/lang';
-import {ArrowRight, ArrowSmallDown} from '../../../../assets/images/icons/arrows';
 import mainImg from '/src/assets/images/statics/about-page-image.png';
 import classNames from 'classnames';
 

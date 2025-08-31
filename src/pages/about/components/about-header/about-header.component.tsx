@@ -30,7 +30,7 @@ const AboutHeaderComponent = () => {
                 <h2>{translate('about_breadcrumb_title')}</h2>
             </div>
 
-            <LeadComponent isLoading={isLoading} heroLead={heroLead} file/>
+            <LeadComponent isLoading={isLoading} heroLead={heroLead} file tag heading description/>
 
 
         </div>
