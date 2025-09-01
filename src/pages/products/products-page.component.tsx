@@ -7,7 +7,7 @@ import ProductsSectionComponent from './components/products-section/products-sec
 import {useLeadQuery} from '../../core/shared/leads/actions/leads.queries';
 import {ILeads} from '../../core/shared/leads/component/leads';
 import useLocalization from '../../assets/lang';
-import {Spin} from "antd";
+import {Spin} from 'antd';
 
 const ProductsPageComponent = () => {
     const classes = useProductStyles();

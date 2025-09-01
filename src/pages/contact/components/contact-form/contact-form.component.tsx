@@ -23,6 +23,7 @@ const ContactFormComponent = () => {
 
     const onFinish = useCallback((values: IContactForm) => {
         message.success(translate('home_credits_apply_success'));
+        console.log('Form values:', new ContactFormModel(values));
         form.resetFields();
     }, [form]);
     const onFinishFailed = useCallback((errorInfo: any) => {

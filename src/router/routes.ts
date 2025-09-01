@@ -1,9 +1,6 @@
 export enum Routes {
     default = '/',
-    auth = '/auth',
     home = '/',
-    table = '/table',
-    login = '/auth/login',
     about = '/about',
     products = '/products',
     products_detail='/products/:id',
