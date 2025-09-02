@@ -5,8 +5,7 @@ import {Routes} from '../../../../router/routes';
 import {HomeIcon} from '../../../../assets/images/icons/home-icon';
 import {ArrowRight, ArrowSmallRight} from '../../../../assets/images/icons/arrows';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
-import {Spin} from 'antd';
-import LeadComponent from '../../../../core/shared/leads/component/leads.component';
+import LeadComponent from '../../../../core/shared/leads/leads.component';
 import Button from '../../../../core/shared/button/button.component';
 
  const PartnersHeroSectionComponent = () => {
@@ -14,13 +13,6 @@ import Button from '../../../../core/shared/button/button.component';
     const classes = usePartnerHeroSectionStyles();
     const {data: leads = [], isLoading} = useLeadQuery();
     const heroLead = leads.find(lead => lead.id === 9);
-    if (isLoading) {
-        return (
-            <div className='d-flex justify-content-center align-items-center'>
-                <Spin size='large' />
-            </div>
-        );
-    }
     return (
         <div className='container'>
             <div className={classes.homeIconSection}>

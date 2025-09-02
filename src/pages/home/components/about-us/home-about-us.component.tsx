@@ -6,7 +6,7 @@ import {useAboutUsVideoQuery} from '../../actions/about-us.queries';
 import {useState} from 'react';
 import {Modal, Spin} from 'antd';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
-import LeadComponent from '../../../../core/shared/leads/component/leads.component';
+import LeadComponent from '../../../../core/shared/leads/leads.component';
 
 const HomeAboutUsComponent = () => {
     const classes = useHomeAboutUsStyles();
@@ -16,13 +16,6 @@ const HomeAboutUsComponent = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const {data: leads = [], isLoading: isLoadingLeads} = useLeadQuery();
     const heroLead = leads.find(lead => lead.id === 2);
-    if (isLoadingVideo || isLoadingLeads) {
-        return (
-            <div className="d-flex justify-content-center align-items-center">
-                <Spin size="large" />
-            </div>
-        );
-    }
     return (
         <div className={'container'}>
             <div className={classes.wrapper}>

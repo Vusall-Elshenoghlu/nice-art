@@ -2,7 +2,7 @@ import React, {useMemo} from 'react';
 import {Spin} from 'antd';
 import {useLeadsStyles} from './leads.style';
 import {LeadComponentProps} from './leads';
-import useLocalization from '../../../../assets/lang';
+import useLocalization from '../../../assets/lang';
 import mainImg from '/src/assets/images/statics/about-page-image.png';
 import classNames from 'classnames';
 
@@ -85,7 +85,6 @@ const LeadComponent = ({
                                         <div className={classes.rightDiv}>
                                             <img src={heroLead?.file?.url} alt={translate('home_about_image_alt')}/>
                                         </div>
-
                                     </>
                                 )
                             }
@@ -106,6 +105,7 @@ const LeadComponent = ({
                                     </>
                                 ) : (
                                     <>
+                                        {title && <h1 className={classes.titleTextSmall}>{heroLead?.title}</h1>}
                                         {returnSmallContent}
                                     </>
                                 )
@@ -121,11 +121,9 @@ const LeadComponent = ({
                                 ): (<p className={classes.descriptionRightText}>{heroLead?.description}</p>)
                             }
                         </div>
-
                     </>
                 )
             }
-
         </div>
     );
 };

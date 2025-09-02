@@ -6,7 +6,7 @@ import {Routes} from '../../../../router/routes';
 import useLocalization from '../../../../assets/lang';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
 import {Spin} from 'antd';
-import LeadComponent from '../../../../core/shared/leads/component/leads.component';
+import LeadComponent from '../../../../core/shared/leads/leads.component';
 
 const AboutHeaderComponent = () => {
     const classes = useAboutHeaderStyles();

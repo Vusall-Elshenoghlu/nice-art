@@ -5,7 +5,7 @@ import {ArrowSmallRight} from '../../assets/images/icons/arrows';
 import {useProductStyles} from './products-page.style';
 import ProductsSectionComponent from './components/products-section/products-section.component';
 import {useLeadQuery} from '../../core/shared/leads/actions/leads.queries';
-import {ILeads} from '../../core/shared/leads/component/leads';
+import {ILeads} from '../../core/shared/leads/leads';
 import useLocalization from '../../assets/lang';
 import {Spin} from 'antd';
 

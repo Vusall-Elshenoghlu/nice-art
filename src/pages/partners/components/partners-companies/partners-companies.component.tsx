@@ -18,13 +18,6 @@ const PartnersCompaniesComponent = () => {
         setSelectedPartner(partner);
         setIsModalOpen(true);
     }, []);
-    if (isLoading) {
-        return (
-            <div className='d-flex justify-content-center align-items-center'>
-                <Spin size='large'/>
-            </div>
-        );
-    }
     return (
         <div className={'container mt-80 mb-150'}>
             <div className={'row'}>

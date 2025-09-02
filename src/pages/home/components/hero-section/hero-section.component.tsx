@@ -1,6 +1,6 @@
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
 import {Spin} from 'antd';
-import LeadComponent from '../../../../core/shared/leads/component/leads.component';
+import LeadComponent from '../../../../core/shared/leads/leads.component';
 import {Link} from 'react-router-dom';
 import {Routes} from '../../../../router/routes';
 import Button from '../../../../core/shared/button/button.component';
@@ -13,13 +13,6 @@ const HeroSectionComponent = () => {
     const translate = useLocalization();
     const classes = useHeroSectionStyles();
     const heroLead = leads.find(lead => lead.id === 1);
-    if (isLoading) {
-        return (
-            <div className='d-flex justify-content-center align-items-center'>
-                <Spin size='large'/>
-            </div>
-        );
-    }
     return (
         <div className='container mt-50'>
             <LeadComponent heroLead={heroLead} isLoading={isLoading} title={true} titleVariant={'big'} description>

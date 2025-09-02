@@ -1,8 +1,8 @@
 import {createUseStyles} from 'react-jss';
-import {rem} from '../../../../assets/styles/abstracts/functions';
-import {breakpoint} from '../../../../assets/styles/abstracts/mixins';
-import {breakpoints} from '../../../../assets/styles/abstracts/sizes';
-import colors from '../../../../assets/styles/abstracts/color';
+import {rem} from '../../../assets/styles/abstracts/functions';
+import {breakpoint} from '../../../assets/styles/abstracts/mixins';
+import {breakpoints} from '../../../assets/styles/abstracts/sizes';
+import colors from '../../../assets/styles/abstracts/color';
 
 const styles = {
     titleTextBig: {

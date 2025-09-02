@@ -9,7 +9,7 @@ import {rem} from '../../../../assets/styles/abstracts/functions';
 import {ArrowRight} from '../../../../assets/images/icons/arrows';
 import {useLeadQuery} from '../../../../core/shared/leads/actions/leads.queries';
 import Button from '../../../../core/shared/button/button.component';
-import LeadComponent from '../../../../core/shared/leads/component/leads.component';
+import LeadComponent from '../../../../core/shared/leads/leads.component';
 
 const HomeCreditsComponent = () => {
     const translate = useLocalization();
@@ -43,13 +43,6 @@ const HomeCreditsComponent = () => {
 
     const {data: leads = [], isLoading} = useLeadQuery();
     const heroLead = leads.find(lead => lead.id === 4);
-    if (isLoading) {
-        return (
-            <div className='d-flex justify-content-center align-items-center'>
-                <Spin size='large'/>
-            </div>
-        );
-    }
     return (
         <div className='mt-50 container mb-150'>
             <div className={classes.wrapper}>

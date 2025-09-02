@@ -1,4 +1,4 @@
-import {IFileModel} from '../../../../pages/products/components/products-section/products-section';
+import {IFileModel} from '../../../pages/products/components/products-section/products-section';
 
 export interface ILeads {
     id: number;
